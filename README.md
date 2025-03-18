@@ -9,3 +9,12 @@
 
 Gitlab CI component for [vet](https://github.com/safedep/vet). It allows policy
 driven vetting of OSS components against supply chain security risks.
+
+## Usage
+
+```yaml
+include:
+  - component: gitlab.com/safedep/ci-components/vet/scan@<VERSION>
+    inputs:
+
+```
