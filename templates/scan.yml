@@ -2,6 +2,7 @@
 # Docs: https://docs.gitlab.com/ci/yaml/#spec
 spec:
   inputs:
+    # vet specific inputs
     policy:
       description: 'Path to policy file, default policy will be used when not given'
       type: string 
@@ -32,4 +33,13 @@ spec:
       type: number
       default: 300
 
+    # other inputs
+    artifact_access:
+      description: 'artifact_access to determine who can access the job artifacts from the GitLab UI or API'
+      type: string
+      options: 
+        - 'all'
+        - 'developer'
+        - 'none'
+      default: 'developer'
 ---
