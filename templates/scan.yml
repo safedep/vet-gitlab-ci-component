@@ -33,7 +33,10 @@ spec:
       type: number
       default: 300
 
-    # other inputs
+    # gitlab specific inputs
+    stage:
+      description: 'The stage where you want the job to be added'
+      default: test
     artifact_access:
       description: 'artifact_access to determine who can access the job artifacts from the GitLab UI or API'
       type: string
@@ -42,4 +45,22 @@ spec:
         - 'developer'
         - 'none'
       default: 'developer'
+    allow_failure: # Allowing a job to fail without stopping the pipeline.
+      description: 'Whether the scanning job is allowed to fail' 
+      type: boolean
+      default: true
 ---
+
+
+vet_dependency_scanning:
+  stage: $[[ inputs.stage ]]
+  allow_failure: $[[ inputs.allow_failure ]]
+  variables:
+    ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
+  script:
+    - echo "Generating dependency scanning report"
+  artifacts:
+    access: $[[ inputs.artifact_access ]]
+    reports: # This is required for Security Scanning, Docs: 
+      dependency_scanning: $ARTIFACT_FILENAME
+  

@@ -18,3 +18,28 @@ include:
     inputs:
 
 ```
+
+## Configuration Options
+
+The GitLab CI component accepts the following inputs:
+
+### Vet-Specific Inputs
+
+| Input | Type | Default | Description |
+|-------|------|---------|-------------|
+| `policy` | string | `.gitlab/vet/policy.yml` | Path to policy file, default policy will be used when not given |
+| `cloud` | boolean | `false` | Synchronize configuration, policy and report with SafeDep cloud |
+| `cloud-key` | string | | API key to use for synchronizing report with SafeDep cloud |
+| `cloud-tenant` | string | | Tenant ID to use for synchronizing report with SafeDep cloud |
+| `version` | string | `latest` | vet version to use for the scan. Defaults to using latest release |
+| `exception-file` | string | | Path to exception file |
+| `trusted-registries` | array | `[]` | Comma separated list of trusted registry base URLs |
+| `timeout` | number | `300` | Timeout in seconds for vet to wait for external service results to be available. For malicious package analysis, this set the maximum time to wait for the analysis results to be available |
+
+### GitLab-Specific Inputs
+
+| Input | Type | Default | Description |
+|-------|------|---------|-------------|
+| `stage` | string | `test` | The stage where you want the job to be added |
+| `artifact_access` | string | `developer` | Determines who can access the job artifacts from the GitLab UI or API. Options: `all`, `developer`, `none` |
+| `allow_failure` | boolean | `true` | Whether the scanning job is allowed to fail |
