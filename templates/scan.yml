@@ -12,9 +12,13 @@ spec:
       type: boolean
       default: false
     cloud-key:
+      rules:  
+        - if: $[[ inputs.cloud ]] # only show this input if cloud is true
       description: 'API key to use for synchronizing report with SafeDep cloud'
       type: string
     cloud-tenant:
+      rules:  
+        - if: $[[ inputs.cloud ]] # only show this input if cloud is true
       description: 'Tenant ID to use for synchronizing report with SafeDep cloud'
       type: string
     version:
@@ -24,6 +28,7 @@ spec:
     exception-file:
       description: 'Path to exception file'
       type: string
+      default: '.gitlab/vet/exceptions.yml'
     trusted-registries:
       description: 'Comma separated list of trusted registry base URLs'
       type: array
