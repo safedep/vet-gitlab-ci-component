@@ -62,8 +62,6 @@ vet_dependency_scanning:
   variables:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
   script:
-    - echo "Generating dependency scanning report"
-    - echo "Vet version: $VET_VERSION"
     - vet version
   artifacts:
     access: $[[ inputs.artifact_access ]]
