@@ -1,4 +1,4 @@
-# Rlease is Required (Espically `release` keyword) for publishing CI Component To CI / CD Catalog
+# Rlease is Required (specialy `release` keyword) for publishing CI Component To CI / CD Catalog
 # See: https://docs.gitlab.com/ci/components/#publish-a-new-release
 #
 # create-release:
