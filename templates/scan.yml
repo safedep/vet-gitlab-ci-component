@@ -12,15 +12,13 @@ spec:
       type: boolean
       default: false
     cloud-key:
-      rules:  
-        - if: $[[ inputs.cloud ]] # only show this input if cloud is true
       description: 'API key to use for synchronizing report with SafeDep cloud'
       type: string
+      default: ''
     cloud-tenant:
-      rules:  
-        - if: $[[ inputs.cloud ]] # only show this input if cloud is true
       description: 'Tenant ID to use for synchronizing report with SafeDep cloud'
       type: string
+      default: ''
     version:
       description: 'vet version to use for the scan. Defaults to using latest release'
       type: string

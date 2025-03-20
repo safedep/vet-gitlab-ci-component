@@ -1,3 +1,4 @@
+# Ensure if the safedep/vet/scan component is available
 include:
   - component: $CI_SERVER_FQDN/$CI_PROJECT_PATH/scan@$CI_COMMIT_SHA
 
