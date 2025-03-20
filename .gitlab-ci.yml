@@ -15,10 +15,11 @@ ensure-job-added:
   script:
     - echo "Expect that a job named '$SCAN_JOB_NAME' is added to the pipeline"
     - |
-      route="$CI_API_V4_URL/projects/$CI_PROJECT_ID/pipelines/$CI_PIPELINE_ID/jobs"
-      count=`curl --silent $route | jq 'map(select(.name | contains("$SCAN_JOB_NAME"))) | length'`
-      if [ "$count" != "1" ]; then
-        echo "Job named '$SCAN_JOB_NAME' not found in pipeline"
+      route="${CI_API_V4_URL}/projects/$CI_PROJECT_ID/pipelines/$CI_PIPELINE_ID/jobs"
+      if curl --silent --header "JOB-TOKEN: $CI_JOB_TOKEN" $route | jq -e "any(.name | contains(\"$SCAN_JOB_NAME\"))" > /dev/null; then
+        echo "Component Job '$SCAN_JOB_NAME' is present"
+      else
+        echo "Component Job '$SCAN_JOB_NAME' is not present"
         exit 1
       fi
   rules:
