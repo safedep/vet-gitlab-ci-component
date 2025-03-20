@@ -16,10 +16,7 @@ driven vetting of OSS components against supply chain security risks.
 include:
   - component: gitlab.com/safedep/ci-components/vet/scan@<VERSION>
     inputs:
-      policy: '.custom/path/to/policy.yml'
-      cloud: true
-      cloud-key: '9JF0J30FJ390UF3JF0J'
-      cloud-tenant: 'demo.platform.safedep.io'
+      policy: '.gitlab/vet/policy.yml'
 ```
 
 where `<VERSION>` is the latest released tag or `main`.
