@@ -54,7 +54,7 @@ spec:
 vet_dependency_scanning:
   image: 
     name: ghcr.io/safedep/vet:latest
-    entrypoint: ["/bin/sh", "-c"] 
+    entrypoint: [""] 
   stage: $[[ inputs.stage ]]
   allow_failure: $[[ inputs.allow_failure ]]
   variables:
