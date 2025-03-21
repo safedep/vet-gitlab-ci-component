@@ -53,7 +53,7 @@ spec:
 .common:
   image: 
     name: ghcr.io/safedep/vet:latest
-    entrypoint: [""]  # by default vet's docker entrypoint is ["vet"] but we want to it as environment  / shell
+    entrypoint: [""] # by default vet's docker entrypoint is ["vet"] but we want to it as environment  / shell, so we override it to empty allowsing gitlab to work with it
   stage: $[[ inputs.stage ]]
   allow_failure: $[[ inputs.allow_failure ]]
 
