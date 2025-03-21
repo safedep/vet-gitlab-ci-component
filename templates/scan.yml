@@ -52,13 +52,15 @@ spec:
 
 
 vet_dependency_scanning:
-  image: ghcr.io/safedep/vet:latest
+  image: 
+    name: ghcr.io/safedep/vet:latest
+    entrypoint: ["/bin/sh", "-c"] 
   stage: $[[ inputs.stage ]]
   allow_failure: $[[ inputs.allow_failure ]]
   variables:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
   script:
-    - echo 'hello'
+    - vet version
   artifacts:
     access: $[[ inputs.artifact_access ]]
     reports: # This is required for Security Scanning, Docs: 
