@@ -50,13 +50,15 @@ spec:
       default: true
 ---
 
-
-vet_dependency_scanning:
+.common:
   image: 
     name: ghcr.io/safedep/vet:latest
-    entrypoint: [""] 
+    entrypoint: [""]  # by default vet's docker entrypoint is ["vet"] but we want to it as environment  / shell
   stage: $[[ inputs.stage ]]
   allow_failure: $[[ inputs.allow_failure ]]
+
+vet_dependency_scanning:
+  extends: .common
   variables:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
   script:
@@ -66,4 +68,16 @@ vet_dependency_scanning:
     reports: # This is required for Security Scanning, Docs: 
       dependency_scanning: $ARTIFACT_FILENAME
  
-  
+
+# CycloneDX SBOM is not supported yet
+# 
+# vet_sbom:
+#   extends: .common
+#   variables:
+#     ARTIFACT_FILENAME: "gl-sbom-report.json"
+#   script:
+#     - /usr/local/bin/vet version
+#   artifacts:
+#     access: $[[ inputs.artifact_access ]]
+#     reports: # This is required for Security Scanning, Docs: 
+#       sbom: $ARTIFACT_FILENAME
