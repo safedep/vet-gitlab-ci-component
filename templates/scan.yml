@@ -62,7 +62,7 @@ vet_dependency_scanning:
   variables:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
   script:
-    - /usr/local/bin/vet version
+    - vet version
   artifacts:
     access: $[[ inputs.artifact_access ]]
     reports: # This is required for Security Scanning, Docs: 
