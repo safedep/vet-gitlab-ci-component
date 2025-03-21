@@ -52,7 +52,7 @@ spec:
 
 
 vet_dependency_scanning:
-  image: ghcr.io/safedep/vet:latest # always use latest version
+  # image: ghcr.io/safedep/vet:latest # always use latest version
   stage: $[[ inputs.stage ]]
   allow_failure: $[[ inputs.allow_failure ]]
   variables:
