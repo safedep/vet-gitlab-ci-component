@@ -51,9 +51,9 @@ spec:
 ---
 
 .common:
-  image: 
-    name: ghcr.io/safedep/vet:latest
-    entrypoint: [""] # by default vet's docker entrypoint is ["vet"] but we want to it as environment  / shell, so we override it to empty allowsing gitlab to work with it
+  # image: 
+  #   name: ghcr.io/safedep/vet:latest
+  #   entrypoint: [""] # by default vet's docker entrypoint is ["vet"] but we want to it as environment  / shell, so we override it to empty allowsing gitlab to work with it
   stage: $[[ inputs.stage ]]
   allow_failure: $[[ inputs.allow_failure ]]
 
@@ -62,7 +62,7 @@ vet_dependency_scanning:
   variables:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
   script:
-    - vet version
+    - echo 'hello'
   artifacts:
     access: $[[ inputs.artifact_access ]]
     reports: # This is required for Security Scanning, Docs: 
