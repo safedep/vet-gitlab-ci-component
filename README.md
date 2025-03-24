@@ -31,7 +31,7 @@ The GitLab CI component accepts the following inputs:
 | `cloud` | boolean | `false` | Synchronize configuration, policy and report with SafeDep cloud |
 | `cloud-key` | string | | API key to use for synchronizing report with SafeDep cloud |
 | `cloud-tenant` | string | | Tenant ID to use for synchronizing report with SafeDep cloud |
-| `exception-file` | string | `.gitlab/vet/exceptions.yml` | Path to exception file |
+| `exception-file` | string | | Path to exception file |
 | `trusted-registries` | array | `[]` | List of trusted registry base URLs |
 | `timeout` | number | `300` | Timeout in seconds for vet to wait for external service results to be available. For malicious package analysis, this set the maximum time to wait for the analysis results to be available |
 

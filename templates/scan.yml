@@ -29,7 +29,6 @@ spec:
     exception-file:
       description: 'Path to exception file'
       type: string
-      default: '.gitlab/vet/exceptions.yml'
     trusted-registries:
       description: 'List of trusted registry base URLs'
       type: array
@@ -58,6 +57,7 @@ spec:
 ---
 # For now policy file is required, but in future we can make it optional
 # Since we are generating sarif report
+# TODO: only check if its input is provided
 .check-policy-file: &check-policy-file |
   echo "Checking policy file: $[[ inputs.policy ]]"
 
@@ -67,6 +67,19 @@ spec:
   fi
 
   echo "Policy file found"
+
+# If exception file is provided, check if it exists
+.check-exception-file: &check-exception-file |
+  if [ ! -z "$[[ inputs.exception-file ]]" ]; then
+    echo "Checking exception file: $[[ inputs.exception-file ]]"
+
+    if [ ! -f "$[[ inputs.exception-file ]]" ]; then
+      echo "Exception file not found: $[[ inputs.exception-file ]]"
+      exit 1
+    fi
+
+    echo "Exception file found"
+  fi
 
 .download-wget: &download-wget |
   echo "Downloading wget"
@@ -115,6 +128,7 @@ vet_dependency_scanning:
     entrypoint: [""] # by default vet's docker entrypoint is ["vet"] but we want to it as environment  / shell, so we override it to empty allowsing gitlab to work with it
   before_script:
     - *check-policy-file
+    - *check-exception-file
     - *veirfy-cloud-config
     - *download-wget
     - *download-sarif-converter
@@ -136,13 +150,19 @@ vet_dependency_scanning:
       CMD="$CMD --malware-analysis-timeout $[[ inputs.timeout ]]s"
     fi
 
-    # TODO: Add trusted registries if provided
+    # Add trusted registries if provided
     if [[ "$[[ inputs.trusted-registries ]]" -gt 0 ]]; then
       echo "Using trusted registries"
       
       for registry in "${[[ inputs.trusted-registries ]]}"; do
         CMD="$CMD --trusted-registry $registry"
       done
+    fi
+
+    # Add exception file if provided
+    if [ ! -z "$[[ inputs.exception-file ]]" ]; then
+      echo "Using exception file: $[[ inputs.exception-file ]]"
+      CMD="$CMD --exceptions $[[ inputs.exception-file ]]"
     fi
 
     # Execute the final command
