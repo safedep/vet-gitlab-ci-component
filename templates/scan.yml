@@ -31,7 +31,7 @@ spec:
       type: string
       default: '.gitlab/vet/exceptions.yml'
     trusted-registries:
-      description: 'Comma separated list of trusted registry base URLs'
+      description: 'List of trusted registry base URLs'
       type: array
       default: []
     timeout:
@@ -98,6 +98,11 @@ spec:
       echo "Error: cloud-tenant is required when cloud synchronization is enabled"
       exit 1
     fi
+
+    if [ -z "$[[ inputs.timeout ]]" ]; then
+      echo "Error: timeout is required when cloud synchronization is enabled"
+      exit 1
+    fi
     
     echo "Cloud configuration validated successfully"
   fi
@@ -115,8 +120,9 @@ vet_dependency_scanning:
     - *download-sarif-converter
   variables:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
+    REPORT_FILENAME: "local-report.sarif"
   script: |
-    CMD="vet scan --report-sarif $ARTIFACT_FILENAME --filter-suite $[[ inputs.policy ]]"
+    CMD="vet scan --report-sarif $REPORT_FILENAME --filter-suite $[[ inputs.policy ]]"
     
     # Add cloud sync flags if cloud is enabled
     if [[ "$[[ inputs.cloud ]]" == "true" ]]; then
@@ -129,15 +135,32 @@ vet_dependency_scanning:
       CMD="$CMD --malware"
       CMD="$CMD --malware-analysis-timeout $[[ inputs.timeout ]]s"
     fi
-    
+
+    if [[ "${#[[ inputs.trusted-registries ]]}" -gt 0 ]]; then
+      TRUSTED_REGISTRIES=$(IFS=,; echo "${[[ inputs.trusted-registries ]]}")
+      CMD="$CMD --trusted-registry $TRUSTED_REGISTRIES"
+    fi
+
     # Execute the final command
     $CMD
 
-    # - ./sarif-converter --input $ARTIFACT_FILENAME --output $ARTIFACT_FILENAME
-    # - cat $ARTIFACT_FILENAME
+    # Check if SARIF report file exists
+    if [ ! -f $REPORT_FILENAME ]; then
+      echo "Error: SARIF report file not found: $REPORT_FILENAME"
+      exit 1
+    fi
+
+    # Convert SARIF report to GitLab specific format
+    ./sarif-converter --type sast $REPORT_FILENAME $ARTIFACT_FILENAME
+
+    # Check if artifact file exists
+    if [ ! -f $ARTIFACT_FILENAME ]; then
+      echo "Error: Artifact file not found: $ARTIFACT_FILENAME"
+      exit 1
+    fi
   artifacts:
     access: $[[ inputs.artifact_access ]]
     reports: # This is required for Security Scanning
-      dependency_scanning: $ARTIFACT_FILENAME
+      sast: $ARTIFACT_FILENAME
     expire_in: 1 week
 
