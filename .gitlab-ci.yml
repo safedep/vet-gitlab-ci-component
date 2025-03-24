@@ -10,38 +10,31 @@ variables:
   SCAN_JOB_NAME: "vet_dependency_scanning"
   SBOM_JOB_NAME: "vet_sbom"
 
-# Ensure that are able to load (import) the component
-ensure-job-added-dependency-scanning:
+.ensure-job-added: &ensure-job-added
   stage: test
   image: badouralix/curl-jq
   script:
-    - echo "Expect that a job named '$SCAN_JOB_NAME' is added to the pipeline"
+    - echo "Expect that a job named '$JOB_NAME' is added to the pipeline"
     - |
       route="${CI_API_V4_URL}/projects/$CI_PROJECT_ID/pipelines/$CI_PIPELINE_ID/jobs"
-      if curl --silent --header "JOB-TOKEN: $CI_JOB_TOKEN" $route | jq -e "any(.name | contains(\"$SCAN_JOB_NAME\"))" > /dev/null; then
-        echo "Component Job '$SCAN_JOB_NAME' is present"
+      if curl --silent --header "JOB-TOKEN: $CI_JOB_TOKEN" $route | jq -e "any(.name | contains(\"$JOB_NAME\"))" > /dev/null; then
+        echo "Component Job '$JOB_NAME' is present"
       else
-        echo "Component Job '$SCAN_JOB_NAME' is not present"
+        echo "Component Job '$JOB_NAME' is not present"
         exit 1
       fi
   rules:
     - if: ($CI_COMMIT_BRANCH || $CI_COMMIT_TAG) && $CI_SERVER_HOST =~ /gitlab.com/
 
+ensure-job-added-dependency-scanning:
+  <<: *ensure-job-added
+  variables:
+    JOB_NAME: $SCAN_JOB_NAME
+
 ensure-job-added-sbom:
-  stage: test
-  image: badouralix/curl-jq
-  script:
-    - echo "Expect that a job named '$SBOM_JOB_NAME' is added to the pipeline"
-    - |
-      route="${CI_API_V4_URL}/projects/$CI_PROJECT_ID/pipelines/$CI_PIPELINE_ID/jobs"
-      if curl --silent --header "JOB-TOKEN: $CI_JOB_TOKEN" $route | jq -e "any(.name | contains(\"$SBOM_JOB_NAME\"))" > /dev/null; then
-        echo "Component Job '$SBOM_JOB_NAME' is present"
-      else
-        echo "Component Job '$SBOM_JOB_NAME' is not present"
-        exit 1
-      fi
-  rules:
-    - if: ($CI_COMMIT_BRANCH || $CI_COMMIT_TAG) && $CI_SERVER_HOST =~ /gitlab.com/
+  <<: *ensure-job-added
+  variables:
+    JOB_NAME: $SBOM_JOB_NAME
 
 # Ensure that a project description exists, because it will be important to display
 # the resource in the catalog.
