@@ -115,8 +115,24 @@ vet_dependency_scanning:
     - *download-sarif-converter
   variables:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
-  script:
-    - vet scan --report-sarif $ARTIFACT_FILENAME --filter-suite $[[ inputs.policy ]]
+  script: |
+    CMD="vet scan --report-sarif $ARTIFACT_FILENAME --filter-suite $[[ inputs.policy ]]"
+    
+    # Add cloud sync flags if cloud is enabled
+    if [[ "$[[ inputs.cloud ]]" == "true" ]]; then
+      CMD="$CMD --report-sync"
+      CMD="$CMD --report-sync-project $CI_PROJECT_PATH"
+      CMD="$CMD --report-sync-project-version $CI_COMMIT_REF_NAME"
+
+      echo "Activating malicious package analysis with timeout: $[[ inputs.timeout ]]s"
+
+      CMD="$CMD --malware"
+      CMD="$CMD --malware-analysis-timeout $[[ inputs.timeout ]]s"
+    fi
+    
+    # Execute the final command
+    $CMD
+
     # - ./sarif-converter --input $ARTIFACT_FILENAME --output $ARTIFACT_FILENAME
     # - cat $ARTIFACT_FILENAME
   artifacts:
