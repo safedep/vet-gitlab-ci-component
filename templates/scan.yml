@@ -68,6 +68,13 @@ spec:
 
   echo "Policy file found"
 
+.download-wget: &download-wget |
+  echo "Downloading wget"
+
+  apt-get update && apt-get install -y wget
+
+  echo "wget downloaded"
+
 # Download sarif-converter for converting sarif report to gitlab specific dependency scanning report 
 .download-sarif-converter: &download-sarif-converter |
   echo "Downloading sarif-converter"
@@ -85,6 +92,7 @@ vet_dependency_scanning:
     entrypoint: [""] # by default vet's docker entrypoint is ["vet"] but we want to it as environment  / shell, so we override it to empty allowsing gitlab to work with it
   before_script:
     - *check-policy-file
+    - *download-wget
     - *download-sarif-converter
   variables:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
