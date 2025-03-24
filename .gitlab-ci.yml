@@ -1,45 +1,25 @@
 # Ensure if the safedep/vet/scan component is available
 include:
   - component: $CI_SERVER_FQDN/$CI_PROJECT_PATH/scan@$CI_COMMIT_SHA
-  - component: $CI_SERVER_FQDN/$CI_PROJECT_PATH/sbom@$CI_COMMIT_SHA
 
 stages: [test, release]
 
 variables:
-  # make sure its same as the job name in the template/scan.yml & template/sbom.yml
-  SCAN_JOB_NAME_DEPENDENCY_SCANNING: "vet_dependency_scanning"
-  SCAN_JOB_NAME_SBOM: "vet_sbom"
+  # make sure its same as the job name in the template/scan.yml
+  SCAN_JOB_NAME: "vet_dependency_scanning"
 
-# Ensure that are able to load the dependency scanning component
-ensure_job_template_dependency_scanning:
+# Ensure that are able to load (import) the component
+ensure-job-added:
   stage: test
   image: badouralix/curl-jq
   script:
-    - echo "Expect that a job named '$SCAN_JOB_NAME_DEPENDENCY_SCANNING' is added to the pipeline"
+    - echo "Expect that a job named '$SCAN_JOB_NAME' is added to the pipeline"
     - |
-      route="${CI_API_V4_URL}/projects/$CI_PROJECT_ID/pipelines/$CI_PIPELINE_ID}/jobs"
-      if curl --silent --header "JOB-TOKEN: $CI_JOB_TOKEN" $route | jq -e "any(.name | contains(\"$SCAN_JOB_NAME_DEPENDENCY_SCANNING\"))" > /dev/null; then
-        echo "Component Job '$SCAN_JOB_NAME_DEPENDENCY_SCANNING' is present"
+      route="${CI_API_V4_URL}/projects/$CI_PROJECT_ID/pipelines/$CI_PIPELINE_ID/jobs"
+      if curl --silent --header "JOB-TOKEN: $CI_JOB_TOKEN" $route | jq -e "any(.name | contains(\"$SCAN_JOB_NAME\"))" > /dev/null; then
+        echo "Component Job '$SCAN_JOB_NAME' is present"
       else
-        echo "Component Job '$SCAN_JOB_NAME_DEPENDENCY_SCANNING' is not present"
-        exit 1
-      fi
-  rules:
-    - if: ($CI_COMMIT_BRANCH || $CI_COMMIT_TAG) && $CI_SERVER_HOST =~ /gitlab.com/
-
-
-# Ensure that are able to load the sbom component
-ensure_job_template_sbom:
-  stage: test
-  image: badouralix/curl-jq
-  script:
-    - echo "Expect that a job named '$SCAN_JOB_NAME_SBOM' is added to the pipeline"
-    - |
-      route="${CI_API_V4_URL}/projects/$CI_PROJECT_ID/pipelines/$CI_PIPELINE_ID}/jobs"
-      if curl --silent --header "JOB-TOKEN: $CI_JOB_TOKEN" $route | jq -e "any(.name | contains(\"$SCAN_JOB_NAME_SBOM\"))" > /dev/null; then
-        echo "Component Job '$SCAN_JOB_NAME_SBOM' is present"
-      else
-        echo "Component Job '$SCAN_JOB_NAME_SBOM' is not present"
+        echo "Component Job '$SCAN_JOB_NAME' is not present"
         exit 1
       fi
   rules:
