@@ -59,15 +59,23 @@ spec:
 # For now policy file is required, but in future we can make it optional
 # Since we are generating sarif report
 .check-policy-file: &check-policy-file |
+  echo "Checking policy file: $[[ inputs.policy ]]"
+
   if [ ! -f $[[ inputs.policy ]] ]; then
     echo "Policy file not found: $[[ inputs.policy ]]"
     exit 1
   fi
 
+  echo "Policy file found"
+
 # Download sarif-converter for converting sarif report to gitlab specific dependency scanning report 
 .download-sarif-converter: &download-sarif-converter |
-  wget -O sarif-converter https://gitlab.com/ignis-build/sarif-converter/-/releases/permalink/latest/downloads/bin/sarif-converter-linux
+  echo "Downloading sarif-converter"
+
+  wget -O sarif-converter https://gitlab.com/ignis-build/sarif-converter/-/releases/v0.9.4/downloads/bin/sarif-converter-linux-amd64
   chmod +x sarif-converter
+
+  echo "sarif-converter downloaded"
 
 vet_dependency_scanning:
   stage: $[[ inputs.stage ]]
@@ -76,16 +84,12 @@ vet_dependency_scanning:
     name: ghcr.io/safedep/vet:$[[ inputs.version ]]
     entrypoint: [""] # by default vet's docker entrypoint is ["vet"] but we want to it as environment  / shell, so we override it to empty allowsing gitlab to work with it
   before_script:
-    # Download sarif-converter for converting sarif report to gitlab specific dependency scanning report
     - *check-policy-file
-    # - *download-sarif-converter
+    - *download-sarif-converter
   variables:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
   script:
     - vet version
-    - whoami
-    - pwd
-    - ls -la
     # - vet scan --policy $[[ inputs.policy ]] --output $ARTIFACT_FILENAME
     # - ./sarif-converter --input $ARTIFACT_FILENAME --output $ARTIFACT_FILENAME
     # - cat $ARTIFACT_FILENAME
