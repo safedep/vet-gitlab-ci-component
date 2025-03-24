@@ -1,2 +1,15 @@
 # Vet Default Policy Path
 # .gitlab/vet/policy.yml
+
+name: Generic Filter Suite
+description: Example filter suite with canned filters
+filters:
+  - name: critical-vuln
+    value: |
+      vulns.critical.exists(p, true)
+  - name: safe-licenses
+    value: |
+      licenses.exists(p, (p != "MIT") && (p != "Apache-2.0"))
+  - name: ossf-maintained
+    value: |
+      scorecard.scores.Maintained == 0
