@@ -68,3 +68,5 @@ vet_sbom:
     access: $[[ inputs.artifact_access ]]
     reports: # This is required for Security Scanning, Docs: 
       cyclonedx: $ARTIFACT_FILENAME
+    expire_in: 1 week
+    
