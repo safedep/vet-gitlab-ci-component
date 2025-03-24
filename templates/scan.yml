@@ -158,6 +158,6 @@ vet_dependency_scanning:
   artifacts:
     access: $[[ inputs.artifact_access ]]
     reports: # This is required for Security Scanning
-      sast: $ARTIFACT_FILENAME
+      dependency_scanning: $ARTIFACT_FILENAME
     expire_in: 1 week
 
