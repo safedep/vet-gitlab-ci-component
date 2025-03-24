@@ -11,7 +11,7 @@ variables:
   SCAN_JOB_NAME_SBOM: "vet_sbom"
 
 # Ensure that are able to load the dependency scanning component
-.ensure_job_template_dependency_scanning:
+ensure_job_template_dependency_scanning:
   stage: test
   image: badouralix/curl-jq
   script:
@@ -29,7 +29,7 @@ variables:
 
 
 # Ensure that are able to load the sbom component
-.ensure_job_template_sbom:
+ensure_job_template_sbom:
   stage: test
   image: badouralix/curl-jq
   script:
