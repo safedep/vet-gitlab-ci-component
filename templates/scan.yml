@@ -29,6 +29,7 @@ spec:
     exception-file:
       description: 'Path to exception file'
       type: string
+      default: ''
     trusted-registries:
       description: 'List of trusted registry base URLs'
       type: array
