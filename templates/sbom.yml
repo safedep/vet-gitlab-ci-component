@@ -1,7 +1,7 @@
-# This template is used to generate a dependency scanning report.
-# Report format is JSON.
+# This template is used to generate a SBOM for a project.
+# Report format is CycloneDX.
 #
-# Input Sepcification
+# Input Specification
 # Docs: https://docs.gitlab.com/ci/yaml/#spec
 spec:
   inputs:
@@ -53,18 +53,18 @@ spec:
       default: true
 ---
 
-vet_dependency_scanning:
+#CycloneDX SBOM is not supported yet
+vet_sbom:
   image: 
     name: ghcr.io/safedep/vet:latest
     entrypoint: [""] # by default vet's docker entrypoint is ["vet"] but we want to it as environment  / shell, so we override it to empty allowsing gitlab to work with it
   stage: $[[ inputs.stage ]]
   allow_failure: $[[ inputs.allow_failure ]]
   variables:
-    ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
+    ARTIFACT_FILENAME: "gl-sbom-report.json"
   script:
     - vet version
   artifacts:
     access: $[[ inputs.artifact_access ]]
     reports: # This is required for Security Scanning, Docs: 
-      dependency_scanning: $ARTIFACT_FILENAME
- 
+      sbom: $ARTIFACT_FILENAME
