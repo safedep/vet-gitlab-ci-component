@@ -68,6 +68,7 @@ vet_sbom:
     ARTIFACT_FILENAME: "gl-sbom-report.cdx.json"
   script:
     - vet version
+    - echo "SBOM Not supported yet"
   artifacts:
     access: $[[ inputs.artifact_access ]]
     reports: # This is required for Security Scanning, Docs: 

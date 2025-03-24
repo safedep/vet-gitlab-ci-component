@@ -1,1 +1,5487 @@
-{}
+{
+  "version": "15.1.0",
+  "vulnerabilities": [
+    {
+      "id": "cd5b68f2c9aa3be54de5952d6ad0548f6077b5295f15c7494bcc7a822c0e0e45",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `go.uber.org/multierr` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "47582ae1bbf2f6d6c49a54e53a6dfcf774e6fa271cd15b9c2035e34123aca181",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/ssgreg/nlreturn/v2` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "f6943dbb519727e82da7fe1224d466bd04e013f7ef70b54e6c67ae862a53aad2",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/wagoodman/go-progress` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "7cb7365140a3f1de9aa6d73f96a73f22a2230c98c3725eb9c8202b565b0f10b8",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/gofrs/flock` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "2c3b2d9f8fbe4beffb7087f9de222e5aa147675121838d85046c2aeec88ab400",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/moricho/tparallel` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "9520bcda782c2cda9098ab69dec7711bbacfc780073d8d07f040d379db4d61fe",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/twitchyliquid64/golang-asm` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "f45e3720c635e240ef221a2d819967fa56c68e43ed00d4c19c76846c68c308fd",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/AlecAivazis/survey/v2` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "2a3b9d8faaf5e3da9560bb39cf0e65bb232f2c2e6f325a3dc517ed206face69f",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/kunwardeep/paralleltest` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "2971216a2ac609490567b51777b51e9871e16b43e9fcc2e66211428ecccf3a95",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/nishanths/predeclared` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "7aff01151cc351658726d65935d2d6e0c74b2acb7f579da30bbd5230d224af9c",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/klauspost/compress` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "a4724e4c08af76e8fc848f8e0cf14158732742e3051cf3b23d8d1bb6d2e04af4",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/hexops/gotextdiff` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "12e3a48354a42eb67750c042ceb91486adee8e9d62449b1eca8b89107ca14fb9",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/golangci/plugin-module-register` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "13a32a69812e72274a27e8d88feecd7286a2b41a4b76bfdd149d184b709f73a8",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/labstack/gommon` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "7ed9c4a29d5f9ad4b3213c0b5f1bb675249c5b14cde5a57389b7312d8fb8f22d",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/kulti/thelper` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "2527dbb736afdcbfbf89fbe98f6cd8964abb4337eadc11a6dfc3cab7e3565e6e",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/pkg/errors` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "65bd409da904ae828c7735af6351695ddf6565a07b636af35d71253965e3870d",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/quasilyte/go-ruleguard/dsl` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "9437d8a86c631ee3c345284b8a7aa583a6aa96fcc1e1239bd3b77074c08f2a09",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/mitchellh/mapstructure` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "c6088840907a6ce0ec1ca21811b9a252de4b598b8143830a9d5f6753b9059ebd",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/leonklingele/grouper` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "619cfb00daf398e45c60e3069d618d74af32806f94779520601f4e096908dd80",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `mvdan.cc/unparam` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "4a4a53f107a5b95bd3fc3d0aa5ad4bd05c0a38282071883b8b1e54f416f2b881",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/gorilla/css` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "5bdac07c79a903cf6015c445beafa4f7fed4fbc3c2d63a2a8d3269fcf4562663",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/quasilyte/gogrep` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "55decd495d6cfbc13a7a16e1463849354a26232a910938014bdfe5c355fd641f",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `golang.org/x/term` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "8d3a9a72406661945ad041adfddb0eccc27883ddc6d9279431858dff00bb6f7f",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/fsnotify/fsnotify` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "c11ed9831b9a2dadd8b036484eb978c669fa4cd5c8c410e637374b2b18663318",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/schollz/closestmatch` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "7af67269ebe4562cd979c71e8391cb20d0235f852a29563ffa92f66d345f9b23",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `go-simpler.org/sloglint` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "79e91920ef7b7468e01dd898e6bef59286f1774ce9f283d74b5fb06ee26f178d",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/gostaticanalysis/analysisutil` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "f474f06dd272194ff9333e12aecf0cb4e72fbf2b81ca0af29eaa501afd76b205",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/stretchr/objx` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "3e31b343e588c25f312494b9067c29b7496b81a21ad3bab8aa09f18dc2d2405a",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/mitchellh/go-wordwrap` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "1fd2db950b166009f6dcb32f34da26e1ae174e90a1747a4bbe1e3c1916495bcf",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/uudashr/gocognit` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "eeecd6f85e5360df8b10becf481110ce3163032a4a329c5a70beeac364ce87c5",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/hashicorp/go-multierror` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "76e211be0ca7b75db047bf0b3547ff3fb9acae6ce58e259b294356891c24d8f9",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/CloudyKit/fastprinter` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "db8aff61405afabb3fa9a296354e4f962bcdafd052f53cccd3178c6e7db2f39c",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/timakin/bodyclose` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "cdb14fc6b86494649e70e1bc060ff22d22f78baa9b7fb66e2403b714628147ad",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `mvdan.cc/gofumpt` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "0722d76087f814d3bbebb20f8a23402a22fd8afd04dac5684bf1ba834803055d",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/gostaticanalysis/comment` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "f23b2de72652a146cf6799a2d579964d65ed649508f331d574e6f005b751bddc",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/kataras/sitemap` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "3fde44143c2160ad2b377ed6ea757e8d2bd69fae246d18f36f37d4ecc85b8403",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/ugorji/go/codec` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "ba69c161355ff28d754fa6fa487ef4a01a8b81c8ae502bfce74ffdcbbd2fd30f",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/ultraware/funlen` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "041174536d913e3c2c398eecbe0e76f44d55b44a0e9b72fe12d9d492a6d958f5",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/daixiang0/gci` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "9e31bde35ccd02ac0d3bf7c0ec164fd74f815404c341398beb1f23d604fc25e2",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/gojek/heimdall` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "d8dafaf62ce0b9e73076c8b96553e56c5181882c4bb11cb0170d2fd6f9187383",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/sagikazarmark/slog-shim` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "2ac2e7a33b4df7c78c855e2e4489acf78fea2b3ec611ae68527500c8eba90c0c",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/go-toolsmith/typep` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "8e31bd70a7d425467014b4759e2f345ce2f556fb22d781a333ad364f62c8ae78",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/felixge/fgprof` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "82ebbc3a954001d36584f135c311f2fe06f2027152b834069d0e90403b20ac49",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/rcrowley/go-metrics` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "06f52dda8641bc8160bee98facba7d1a6aa234bd7254da65cac8cd174f824552",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/kataras/pio` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "d4ea779269f3239422440502c444944d4637f1f83d430445aabc87bc20066df2",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/modern-go/concurrent` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "7b8b2c7931e170b6b0415f8d3c3fb026571e8e865db8ac1e121fdb5942072111",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/json-iterator/go` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "0c4fa3324abff99df0b58079fae59f12223c17d40a0f0f40076cc23bea3a2bf3",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/afex/hystrix-go` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "d589e60690b53a7d62f79170d1f677cbe3a0f7e60db99310f763142b1fa6cc93",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/agext/levenshtein` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "43ed20053053d89dba9ecbb0738dd23bb1708f7e438c8dc90b97d35f6aef31e7",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `golang.org/x/time` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "ec266712ad62641621d899515503bf9ec1709d8a35c616ec119f50da74b58184",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/gostaticanalysis/nilerr` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "70987d24b2b64e7d0ee56059f1966788057fbdad6c80773edc90ae4e14c9893a",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/alecthomas/go-check-sumtype` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "60bb4a968208fd10343d19c60b98eb4fd652e7069ce012d92aca565b50300f2a",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/jingyugao/rowserrcheck` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "6595600706965e3b02732a7bf523ea4387318a653cf63a2ec44e13c5dcbd2707",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/xen0n/gosmopolitan` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "138cafbec7741c1158ef1ec49394b3d9563850ab41ec676323a552738bc8e1a3",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `google.golang.org/protobuf` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "148a18e7b531e540314ed09d01a546ade8a7bac8ccd7190757d374725ea45bcf",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/mattn/go-runewidth` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "53dbbf34278391dca5ebba05ab4256e826ba6d669b6e0d980d9b03ed388f47cb",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/gobwas/glob` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "9e6f5df97482ebd6a882d7015c858f2ecefdc16336bcf98a849dc9c2cee0b9e5",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/sivchari/tenv` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "4b4a8524fe1c00a7d4ecca49cf67f0e82894e48cd2d79841d756c29b1abbc094",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/iris-contrib/schema` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "8c5fe9e9e04068f8ac96944ab609fa869082bd03735cf5850cb96b31a426ed2d",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/pborman/indent` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "c2f446f8f4f5d577304d2646b1e58a027ee46f267796eec5329dd9f55b2db63a",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/mattn/go-isatty` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "a0dd8590dedca6558118631f54141a3f0712bb8bcd593b5aa8d11caaaff522a8",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/iancoleman/strcase` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "f5ae09545768a9fb4c4fa8133d9142a29116bf820f3aac7253f3b755e7249c9c",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/magiconair/properties` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "dbd6697df09d5d8c1e0648c6c276dbedd50cde202c3c557b6896ded7310cf0e8",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/nakabonne/nestif` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "c0d24d7645ef443aa7adaab842f77829bb3746a1406b4485bf5f4d8373a92078",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/beorn7/perks` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "78195ba6b764df5eccf11bed7b1bb541152d17898efe6593843cadd8d49d5415",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/rogpeppe/go-internal` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "7eb09dabb717bf39b21cb88562116bac036da06e5a18264531cdd50632cec56e",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/spf13/pflag` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "3fd050f3dea21bb11387115eb0954cb9bf04ff8e236b73e5235a7c39d08f3692",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/owenrumney/go-sarif/v2` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "1e08b081ee5fae191f8347acdff55b6cc92fd68879922faa54b8f9c750c9b70b",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/tylertreat/BoomFilters` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "8349afe2dbd44656a8a024e73e4d980ff9fbec7dadd32cca9439713c502dd907",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/cli/oauth` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "5be550081c6acbc77c33073f13583a2535d8773709fbbfc8474a25e04745a1a0",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/sanposhiho/wastedassign/v2` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "6ad4403211cf12ea2e2c3f9962891d2ad05f1b562b6677d36782f95f75502681",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/inconshreveable/mousetrap` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "5ebec64d7720a377a036908ec3dc3e978e6703f2e3e9edbe2e5bd638bb0d2696",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/josharian/intern` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "50e0d0d3624d451dd9145e2ffe594b4c54b291589263adebf7c0add745bc24df",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/nwaples/rardecode` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "47cf7c6dd470a74402fcef015034cee462b1b9d19cc8c20fec8a52c7154268e1",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/Djarvur/go-err113` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "1494b8519fcbad2aa6a24f67828a17858d46495cf1711056721feb638a440444",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/ccojocar/zxcvbn-go` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "50488f929267a02d3eeeab9e9e6544535ef0713d97e0d69de53f9a714f7e459e",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `4d63.com/gochecknoglobals` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "d1ec5323ad8607d99d6b1cf8bc1127274d52a60036c7f94d597291ad251a15e7",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/jgautheron/goconst` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "4d1b511dee7bda66b5e0251f931de05151c8699ff2a8f7b55331580381a6ca62",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `dario.cat/mergo` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "5712a069f96c313d400d3fcf4e1baeb06c0f362e227cb5f4ea8c8209d96c72e6",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/ryanrolds/sqlclosecheck` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "c46ddfeaea3bdfe2b4a615a775e7ac6870578d7db8acbb7095d9ae497f1aab46",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/docker/go-connections` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "a671463eb47de26844435cb1ab3f2f2695c6709f19bab57e6cb35d97f234d388",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/firefart/nonamedreturns` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "a20a54411ff01151b866b3cd4bcad631357244a410098567e90f1640dd5bd4c5",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/google/go-cmp` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "8e90805b918e5e5511c14c067bafee2310731d02f87231bb57cf429617d992af",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/sashamelentyev/interfacebloat` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "61bc6b2c74b540c02ea1160943440613701375fcbf9f41c2fb9dcdd193200746",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/quasilyte/stdinfo` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "4964595b55b118ca1571d71ef68f2da15f81d3340cc495ad3fb84d18d9c03c95",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/tommy-muehle/go-mnd/v2` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "bb60ce30add97b0228f5284a1cb7972b234d321cfe33432972ab2f5281d57095",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/davecgh/go-spew` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "8bbfe88ab514758736fd1a502fa4d73dd5b05db67016047a19dd0f44ddb45ae9",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/lasiar/canonicalheader` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "2b8978b0e076dc152616f7f16c585f005bb6417a62c09e10a7d6eacd10f9ffb6",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/mitchellh/go-homedir` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "ace265c10087230c652640fe048e50311b8d549ae8e0a9bd04f792d7f49403d8",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/google/uuid` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "e1299f0dcc3df546bdfa1e531cccae60cf086279d370915a30cccdd70acd5355",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/mgutz/ansi` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "26e2c8a6ba62d9eae1492951924dc473c177d047faf52a6e2e339b8bc033c3aa",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/ProtonMail/go-crypto` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "d3084b4d5b542964662da2fc107c0906269101de12fccd8e2ddfb682c534d721",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/sashamelentyev/usestdlibvars` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "e02a8f0a228875e1df6c7f3e403fb41b6b0305f8fa16541e7869841ee8de9aac",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/charithe/durationcheck` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "6031b9b4b0b015ecb7a02f9c921aac3376685d1d65184c24a4b1658110eaf292",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/kataras/golog` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "5458d0e3beb0266b665d78c9d57a9a663562f73510f965a92e0537181e62dc93",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/Masterminds/semver/v3` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "c4d6e210f3c1cb256299a865ab89551fcb46471bce37070229db4d36e7d05564",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/OpenPeeDeeP/depguard/v2` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "00343037236d33041f654a5321cb7007ad761ce31dd1534994f38fb8b6830bfd",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/sourcegraph/go-diff` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "589da92a6d001c20a96334ff9b981bdb37a658d5cfd780e9489b696306afdb6a",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/nishanths/exhaustive` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "41a2d58bd1c58de9879b13b42da4c7a0234e4e4ef65da7d64f66ab10ae9fdadd",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/valyala/bytebufferpool` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "52312c715880ffe97c7c9aba8ae04dc7ba264e31f98c18670d689fde45ac32b2",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/quasilyte/regex/syntax` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "095234e3c28da677d7f141f371b9ae99a2efa639ec030b91c323ea6aa5d7bd69",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/cloudflare/circl` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "bfed7c5473b0133953fc78ee14f6b8daf366e632be117603ed3b64429b5abfeb",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/kataras/iris/v12` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "6bd53e1c6b146a6c116d6ebbc8872157b88b34752283cd6a539b9393fee7c153",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/jjti/go-spancheck` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "c24bda8dd7150ae74ef6d257a5a6d58245d715d2e48d6f9b417f417efcd648fb",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/google/licensecheck` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "6d0c9a5870b5b827130af004efab99d26f111dd83879bf3448eca0ae0495444f",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/chainguard-dev/git-urls` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "c9c1bd74214b8fdbc10d9dcbc38670192c0a6bb9eb015f6ab03db13fd96e0ff3",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/fzipp/gocyclo` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "56fe5a728c63d963451af0c23afbdce01655adba5d5de8f0b15473e3f95f04d9",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/go-toolsmith/astcopy` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "c820a50a135e8e7fb13dd5df4ce2a1c4851fb2bb90ef68012f8f5ce35481a27c",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/xo/terminfo` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "58e76a172e93d0195c0f0ee9f37ccb89df3e6a64cdeb825167f2876fd3613d90",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/go-xmlfmt/xmlfmt` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "d1ad266f4d1b2bc03ce712fd8ab9b2360639202dc906b92e4f7fe194271f028e",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/sivchari/containedctx` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "ea43702161220b7cc37b494e86f9b88346852de671dc684f035345abde915b87",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/butuzov/mirror` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "2dca80f6b9cbbd6e4374a9be96e1521eb7206987eedce56fab3cc57ea54a6b33",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/apparentlymart/go-textseg/v15` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "4602883d84a0feec31fce543f53ec4f61f2dd94af9a13d0386f5145fd418a6ef",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/blizzy78/varnamelen` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "e291cd2a04b09c16e43ab978901f148e416c4e31076c8a70eab4aeb15aa87b21",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/spf13/cast` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "bcfe9583116f984262581db260afea9399abda2fe2e72e16ef6e2e5b07e71ecd",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/scylladb/go-set` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "00c9e885ad2f8c7f18b7ddb39a776c18f72ca3f3fd0100949af2cd089070e761",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/google/cel-go` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "0990afe116ece6cf2c7c834b62ad908457f05513d31b12132104d6dc71e55ca0",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/vifraa/gopom` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "43a892b61eeaa6a36eb25f57163d7541200a4713a773df3564106998bdfd0c9a",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `golang.org/x/sys` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "34d71aa01b6c1b3f33f625f37b5801f360fd6b03458a92265e7c1a6304ed82dc",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/go-toolsmith/astequal` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "237750273273c41771f1d4c5a45c671a06287e2182b53a1f95a44d732cb1add1",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/golangci/unconvert` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "7d989fbc880d19d7a2f2610c650d53d777859c20900662266cd9574e6f6104a9",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/pkg/profile` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "c1fe455b6b2b0f10294fee9023527b8e31809298ceabdfda69439052de944c3e",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/timonwong/loggercheck` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "c8a6c2da5f6b3b2ecd9c9dd2b8a56b882a3b4deec7a055493386638cb5c026b7",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/russross/blackfriday/v2` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "79086cd896775a3353e05a1f582df2a57e81769f5333e078b9fbab72041472b2",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/stbenjam/no-sprintf-host-port` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "11f933f1b52c02b120bed3cf4808d4a49fd45dc6e1eee66364cef8cecbdd2d2b",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/wagoodman/go-partybus` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "4e6790bb9d5cabd45ba696a4bc439a68f4680daa2dc8343985c6978f3c6a4c45",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `golang.org/x/crypto` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "7743eccde580cb7a27a65e8bc9a71f3872bdf43407710c4679fb9c1f518df706",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/spdx/tools-golang` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "d77db1fbe8c9fdbc980008019e6d35c383d6a6e12634f33f9847b5299ec325b0",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/butuzov/ireturn` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "f4f233cffe5ca6cdc649b8ae146bc6a0a5fc58d81b6f29021a53889d56c82c90",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/go-logr/stdr` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "ba4e06539fc4bf9076ad9be9b4b5fa16ceb65bf011d818570a6acbb9347afaa5",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/apapsch/go-jsonmerge/v2` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "eccc76060869ba427797b3e6578e20c2959c8e47e4c855844f38cada1e1820fd",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/golang/snappy` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "9c2bc535a11bf37ccbab9d558e9570cbf32dc2c63acc8f7913d2dd321a4f7316",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/vmihailenco/msgpack/v5` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "d48204f64beb1e60f1bc0e7f88a75691b39fd1952fccc6256cfc5aa64e07eae8",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/rivo/uniseg` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "b932f4646c182554e48ca16636421c91b256dee3ca019e8290fea50a24b5e750",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/Microsoft/go-winio` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "6d97daa5b0340df36a0ceebd6bcdf56fc00555774dd1b3a551eba93a931f4a00",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/alingse/asasalint` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "1a509933f4aaf4b44bff8f6b73bd91af7713b3d6c83ca2d86984d6f99a4bcf8e",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/leodido/go-urn` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "5471455bd72f6997de829ecdb61fc2436943f534c3a990aed925104f110cc6ad",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/hashicorp/hcl/v2` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "9a47973e347d2ca8fb1ca1d757aed4bf9ee79e1d34b14bd059ef26b678d2ee7f",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/munnerz/goautoneg` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "d66780deabcfaf7f8a66b01273c063fe6e49e4ab44fa4f0bb99dec9cfe7f1f9e",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/dsnet/compress` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "bdc88bca12559205524fe915b18f5a58d83f49207af3cf27b3a202bc237e7f7f",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `golang.org/x/arch` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "5fa9a7526e92075ef337161dc21ba0f936f2b78939eb3acfd4bfdc20650f365c",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/becheran/wildmatch-go` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "ec234ebea5fced5294eaa3830cffb68050533ad7599b0750e5b6abb41d51b026",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/antlr4-go/antlr/v4` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "58effea76dac99df152417b8b4fa8278f27cd846b859db54496612dd9432b826",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/therootcompany/xz` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "ae815229791fd2fb497c9ab2cbcf63cd10af7f1ab73d624706466413edbe459d",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/opencontainers/go-digest` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "3c35a023fccea77b91968d15b41044948f37076dd917204213f0ce73a55837c3",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/hidal-go/hidalgo` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "2bd02457a253df70db3ffabd1e97917b8543d520a4f293159714f87c0161137c",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/cayleygraph/quad` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "70674b7ecf14ba406a3074973d48994aa0aff0e1f2ea4cd333e5a9bb84540912",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/ultraware/whitespace` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "108770825f9299220e2148167a855c593b06cb255ac126326be2dccd96e3a37f",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/yeya24/promlinter` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "db46ae2ad83f2083b97ceaea4fc0b8f84a59db844ea1906ca0d74bf87a2d8c94",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/macabu/inamedparam` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "d55a93d360368a1dde1d84585a90d6489891a315850985767bacccc52eba071e",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/kubescape/go-git-url` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "a4c14d67717fe06a4fd0a36d5812605fbe5707896625a0c417f1f2a436efa236",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/ulikunitz/xz` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "098b6fb45bb28bfdb49e9c1463e6c5b4358e7c5e6538833a421335e084322e02",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/go-toolsmith/astcast` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "51a2dc5b5cc3dbbb48a084dba1b9d9b389be20a48b5eecbc9d1527cacdc56b97",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/mitchellh/hashstructure/v2` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "b2283657b4564af09b90bc8f982175e275f0664bf6609e8e55d39278d90b7a59",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/hashicorp/go-version` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "e4f0b810572e8da70d6cc9b02af309b1e0b8a29f9a19f64404e97277c538745e",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/google/go-querystring` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "da038e66ee4e10968592e096f66f02873086adc23fdae8f1ca49bfd3604c0a40",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/go-playground/locales` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "282faa250a74974666038f7efc38d3cd39c6774d739f5750ddaabcbb7a44e3ac",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/hashicorp/golang-lru/v2` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "962f57a5dcadec5cd2c978e303c66a05a29b0fa97a08a34c5f9605a46d436092",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `golang.org/x/net` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "8c5800c46671826a93fcd377c8980de5bb3569fa9eea184f00363fc0065bbe81",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/aymerick/douceur` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "37a85f7a43d57042e02c2c289756a7e3ce4086c787918f8b41e079ebbb10aeb4",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/go-toolsmith/astp` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "1fc313277bad90ee89d36a053be4596e79026ef0ada835bfbc21c0529972f112",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/cespare/xxhash/v2` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "ba68086d21ed00e411d062b4ba91861b91a01123e1a52ab94145371f6566319d",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `go.uber.org/automaxprocs` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "bd0d2c7acb6bdb28f6d9159640ed89ec53d5959eb8df6015db59972c7cf9de86",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/yosssi/ace` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "3f4eb44467e6ec5891ca20314a02257ac8dfaef3ea6a62d180c984b18129e6ff",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/flosch/pongo2/v4` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "90586306c9769cf1328d8d457bf606c00b1cf18744d45084285c9f9b3d633eff",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/go-toolsmith/strparse` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "72dbfd6ee0211f80d6b7671159cf48313f0179cffc9834dd6ebf65b5593e05a5",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `golang.org/x/mod` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "68da86f6349ca775dcc0180f95db7473c1137d5437fb36579a8daa32a114bb3f",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/ettle/strcase` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "c89affbdb391feaf19d60aec7d218877ab2809d864a8a617705218529899b3b8",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/kballard/go-shellquote` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "5667d6601815ccb957c550afbda61e851004422200bc02335b11aab00a1ea083",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/Joker/jade` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "4b23a111138d2dc5404d7bb32439c9e745d49dfc0d22cff03dffdd01ad42525b",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/saintfish/chardet` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "7bbaf228cc42d26a7be3bb3450db0238b5f459dd81fea89b2b49704699d40b28",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/ykadowak/zerologlint` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "5a31fb6bf23e0288c3ade05a7daaf05651c37f528290ccf1559af364996492db",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/go-toolsmith/astfmt` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "2db2351a99e03e985b9455d2d9c5a55dca9a1890ed2381ea0f6048cc28130a40",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `golang.org/x/tools` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "0fdb823377775cb6382de8b8eb70b393ff7bd0f7bf0001502b045608c7a7c6d7",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/vmihailenco/tagparser/v2` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "20d651feff8a70afb65bc2084b327f1b94ce20fc77e94c9b20e57399bbf50519",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/valyala/fasttemplate` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "36cdd1a4b4792739c55bbcc83d7c41779042a6acd168673a36877746cdcd3215",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/google/go-github/v54` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "98b065824d946d08672cd12d351cc599db1fcf389a84746a146d891efb523f5f",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/go-sourcemap/sourcemap` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "73359bf8327dab0edd54fb3f092071e6822e8af704a62e5ac44a67c8ee2ed66e",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/pquerna/cachecontrol` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "8a1fb1499454d3cb9781f2f71f0bf1a1377e98a39ad976f255823024624aa95e",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/chavacava/garif` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "425f837d25988fdff7b0b61e9e27974f69b2a4798f04d7b3673fb227c34fa520",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/mailgun/raymond/v2` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "e955f6d8d271f7ffd60b34ba53db669bae696971fc84432e97f7ae6207647e31",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/bkielbasa/cyclop` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "ad03b40b2e3b0959cc608da73ff45df3158a99b9f277a5214b48d6a248ba61ed",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/smacker/go-tree-sitter` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "16f9c11720fa710060abc672dbf4ac3a3702fbf0d653c9f20709912870ae7686",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/hashicorp/hcl` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "0201c5603dc2e092fd399b284eac424fea3d7fe542302a9db076f33f89d777b6",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/fatih/structs` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "080d0f9d256ef3f13d276b1ca328f0dcec24abe48d5c0284cc824d74afb8e0b5",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/acobaugh/osrelease` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "b8150626aace2724a0470c7ae527451c04787419883a333f4bfe52b343c7b558",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/olekukonko/tablewriter` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "bb3cc2b99b08b7aac284f5d57fc719ff9fc0409c4a43d90dd6809a10a0b69b32",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/hashicorp/errwrap` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "00fd70a7ea1d0c1c1c92a32a331275bd149926140df4fa650fa5d63cef037b05",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/facebookincubator/nvdtools` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "7391878a44326a7740b9bbbcf748523a44a4c2236e560dcc7f92a236774cd094",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `go-simpler.org/musttag` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "6162ed67428b15fd0dc6caad242d30b7e785ea21f384b85f4e5620b39c9ad885",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/klauspost/pgzip` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "ff301995e48f6edb0098548457c8326c486805e51b9af3bcc12ef7813b2d7e0b",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/Antonboom/errname` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "b5b2a820dcbaf7d2b074ada70e10ab53d7feee2fa2dc0d35c46ccc4851209663",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/piprate/json-gold` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "491ddbe5eca243e5668a15c478863a121f8772e06a8d3bce2f2063a8bbf083a8",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/sirupsen/logrus` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "dccc6ebeaf1ebeef3e17297de0f3157349e2a5f9fc835c8b9adb62a1a26d900b",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/fatih/structtag` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "4ecd4b463a9439562f8534f715a57d9fd4d545ae2b27a09012e707c814b15d88",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/pierrec/lz4/v4` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "ea7b493e874de2cf165479cecda7c2edcbba9044bc6f00e0e7a50456b364f3a7",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/alexkohler/prealloc` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "f444562d03a8390bd96bd28a3438ddc19c63d9419b43908847a3db840767ff74",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/sonatard/noctx` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "c6aad1b8c89f044664950f678f69cb03f9677596a53801a9d34a0cabd0c713d9",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/go-playground/universal-translator` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "e3f3cfe1b4dec02e7c1e37d2a0770dd430210b951b284767fd8920fd4498a112",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/kataras/tunnel` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "75c428519437eaacb93c27290cfa33ee55f54feccabb056e71e58b1b5a31b368",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `honnef.co/go/tools` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "8c44b3e6f2cc055d3e603dffdb79b5a49158f3f17c602aa48c1994aabfcb3065",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/quasilyte/go-ruleguard` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "f17a9ff774948ef661fd59b30ef2e19d69174199474f766e6a0ad4b4b087b776",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/gojek/heimdall/v7` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "f15abb08dd85afd49a6943c67f99a8141279ec40a7a6f2fb63fdf8c06003771a",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/boltdb/bolt` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "d9deaeb1f82ed11e18b683c6c215da35ae8e38ad9240ab1308a6ec793b431f68",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/cayleygraph/cayley` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "3cacda29a8c04df6e6d433516fb911af4df6ba1e63db986273404b464be7372f",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/andybalholm/brotli` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "2cdd97673c72dcc36377a0db54e62c49646d5ab26d384f03f1d6283a810c706e",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/zclconf/go-cty-yaml` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "4adf756e5b3390e31e62217dae45d8c2c63a54411147f3e5b2984f9a4e062687",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/microcosm-cc/bluemonday` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "7df961d2dab8d6ae3ee4bdc62fef05a00e06080b5fe61f0f88c3f05c022b9e44",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `sigs.k8s.io/yaml` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "3d15ae2191c8e2cd9e0be30baca9bc58fd45ec4918ca999bb22890492097d71d",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/xi2/xz` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "9b98c5eacfcd60adad60ac493e2d1aa998ffe917c44e8c756ebbf5a33d50657b",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/jinzhu/copier` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "b768057fac9d66e08ddc6fbb3849cd8f13bcc41ecb9fd18f44d57e00d7851136",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/stoewer/go-strcase` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "1de756dc69f26443de686b6efc0ea1cf952570350d7f047374af5e3bfbdd074a",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/hashicorp/go-immutable-radix/v2` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "e40f4938ac58028fafb9cae49c777c72085c6f6790f14fe794d14d88364c4203",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/modern-go/reflect2` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "bc21b0e082d7faa4346c5a7c2af86d897adde9ab44ca7e70780f662b5b9456f3",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/pmezard/go-difflib` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "9a32d750be292d9756ea01716e4795dc1b37a9e2bbc7d644d287d82cf8288a94",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/gordonklaus/ineffassign` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "5dfba769a027c58379f56e81e9d3b98954a342acf5543692fa40ee182cea1a02",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/containerd/errdefs` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "b63b9fd9e2624dd94c1872d5996bd561ff61fb4e202e5f86401f63a5412ad50e",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `golang.org/x/sync` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "d5ea697e5e5c76342070b9ab98b08c57295fdd5b85e0adffc1877c39d665aac5",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/subosito/gotenv` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "f579f863e50ba27b80aebcf05b54357713fd26c9d6baf41a3339867da6d7ddd3",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/golang/protobuf` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "22fa247b2758737c0b645bb2556ebf4af05141e5b5bdc153c90b4057a8cbeec0",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `github.com/denis-tingaikin/go-header` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/go.mod"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "17d6645bd4c2d31b3cf9f2e923b86d1602a3165176633cb1dab7685a62505318",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `pbkdf2-password` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "19e22c9de45e1aeaeb712037fb63ec039e3b10c89b17794130a8fa42125e492e",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `escape-html` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "90f71df002d6ac0c808eb7edc9f02c2d616a7f75efe49b9b315f86d85799b897",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `merge-descriptors` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "d5f384c166a76bd8ccd96a545cd61ef50eb75423354304037aad01351b3a9690",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `on-finished` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "ce3ede2c6a35fa7fa030d04340e91deae06b1b16ae7e18b449de53334d4fafe2",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `encodeurl` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "25695ee9b14c741c5707190989bf19722a2ba9c51902707bbe1085f6582cc877",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `vary` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "5203f7d165068e602a5659e8499632e1802471140546fcf0379a54065d8532ae",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `path-to-regexp` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "7988b44e602ef538c2881be488089450da742bf23855cb8b3c346267086845d6",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `fresh` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "b7b29c3ea63474b26ef3793974b26d08f79fb06203263f964974cf6ce86b633b",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `type-is` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "7d42d3affee16039935fa8ae6ee7bf60ed6b5ea6153481ce57d51925b161eeb7",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `array-flatten` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "b9f3ff1b8eaa7b88ef33f87872e5fd1f56d558fd5cbac8fe8c49e53c77c786f9",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `depd` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "0fc76b1ebd1a1599d8fd1c02f1fccbe22ec73abf52f3f42c2bd461e5ec7958f7",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `parseurl` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "55786ed06be520a625107b6c0e4a4250567c818d1e830a506792988b87467342",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `range-parser` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "09aa721d8a3492c606133d651462727127286f58ab8ac6c6ef423e594438db17",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `statuses` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "4d9e87a7fbc331c1ea9e1a1ebfa3c0a5a62b0e5e9f1ac50a20e60523f7719d0f",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `setprototypeof` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "df01ed7c26a2cef05611e1af0564535f2615a3b2e2305e1a81db3c341b41e010",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `proxy-addr` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "8a63695671cff545b01a14f421114e0bf2db35cde736080a95e656848688065f",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `nyc` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "609017402d631e76d4c030cdf6ce46186b739f5b169e2c82fcd6b05c21195691",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `cookie-session` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "11e6d4656f28fdd5717abe7dd5a9dbe8c97cedc61c3b47d11c463bbc58f5c6b7",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `methods` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "93ed87ae76722dea646eb4c09d54a720d0c1b9261962e783e41a3dc0f57e0b45",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `accepts` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "f78995785215c5cc9f07e76266e698970458088df38ea0c6e9a54bf2bcbe555f",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `etag` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "eb0c1fdcec46068efd51a34665943d2b5c7444795315b7c12b547ba08f7dd235",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `utils-merge` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "56991eeccefd6a179f0a9cd09c63d2a1a29ddacb41c6b2b312735e12af228898",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `hbs` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "32311e1a30f95a437f2056c0d8b504952a61ab4dd4c390d62e99ad77bd31d337",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `cookie-signature` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "8fef4a73725302b3a3a69654da0e9d1e1b5fe32ee191c7331ef184181011064e",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `qs` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "005ae1c08ce0ae6fbdcbc155e73d1b84afa76ec1d24e22a45beff637e06f77d1",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `method-override` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "835e809530d755190d9f3cfc31d94cc67b41842e6ab58c5598182695a52cf796",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `supertest` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "73d0c2df828c638f5e814f9476f6c9b373a723590f5141cab820e28ad78a1b50",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `safe-buffer` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "0a694aed28f3a87c7b215712262bb1874db2d6045dd2665c37361b1969e1cc2c",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `cookie-parser` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "f3cab7b0e583926ef48af3c1cc621cea0e3e6a42754ab9bc7b4efec67ac3cd7a",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `multiparty` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "a295792b975fe6f2f4fffeee75faafbfd9e0c65bc9ab911a797a342feca6871b",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `vhost` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "698ccea271e33eb4f5eec731e474f284f383829702ad76b668cec90757a7f87b",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `after` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/package.json"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "fe1d57d14733838f638ff166724b5489e90c333677aeab115c6d9af96147129e",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `jinja2` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/uv.lock"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "d36bdc4aaf67870eac324a51459ef9d5484f5fec33e355493704e995d6c97b68",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `markupsafe` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/uv.lock"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "7969644195425beca39d3a6a7c5ff81930e634ea498663eb341209c3639e0be5",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `pyyaml` violates policy `critical-vuln`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/uv.lock"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "critical-vuln",
+          "value": "critical-vuln"
+        }
+      ]
+    },
+    {
+      "id": "3d5d6c95e14d3faebc3d2ba79a240c96b2fd1d20f5fafedcfd8ce73f41c846c4",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `asgiref` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/uv.lock"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "892ac7d2999a8e8371f3b598c656a4ccc7a213190f1b4dbe8fa8c3db511c1c36",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `certifi` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/uv.lock"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "186d76ba1a9ba72a75c05c448509f95bbed4b295320478fae329545969d4fdf4",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `chardet` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/uv.lock"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "1f3f08847af38a6bdd066e31483bb2a8dbb934184a4ae138f38a8a900dc623b2",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `starlette` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/parser/fixtures/uv.lock"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "49a519cdbb7b17c9caaa0981c9a94de399a37acd4b045cfc89c3181a24009111",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `antlr:antlr` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/readers/fixtures/java/gradle.lockfile"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "7942d8244a663fe6a5ff4fed2e2838ac794bedf9d70ed9eb40b4af87be7f752a",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `ch.qos.logback:logback-core` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/readers/fixtures/java/gradle.lockfile"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "dff255df52f4b38ffea92d593607b4a68fd764cc67bb3ba6308c5b79925a1298",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `antlr:antlr` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/readers/fixtures/java-multi/gradle.lockfile"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "49d2d39eb82afc758b69e4ad48fc3423f7121d6459c23202a5b24be77429578e",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `ch.qos.logback:logback-core` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/readers/fixtures/java-multi/gradle.lockfile"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "b9fd2aac248956f47e89569bc5ab12b4e08e868ef1e6b0e6baf3af4f06a74536",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `pyasn1` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/readers/fixtures/multi-with-invalid/requirements.txt"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "33a8fb1e95d8ad85495cf7af2951f99f0c617ba4679b890c846f0e83ae28a51f",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `python-dateutil` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/readers/fixtures/multi-with-invalid/requirements.txt"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "d8e77862cbdc4ffce2a5a3ac5860a2534d78eab0cb31ee7864cc65e97d8ca365",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `rsa` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/readers/fixtures/multi-with-invalid/requirements.txt"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "407f991b9a959198c1d334103c3e1ebd0a3d137e3db332572d621a9cb0aa6fd3",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `six` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/readers/fixtures/multi-with-invalid/requirements.txt"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "6f964d425b61e24a9b44cbed1caaa048d795012fca096917f15cfc50dad7665b",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `colorama` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/readers/fixtures/multi-with-invalid/requirements.txt"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "5ce7bc37a5049fe0eace48463f2bd5aaa859c63f2466b6fe24371678f98662fb",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `docutils` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/readers/fixtures/multi-with-invalid/requirements.txt"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "8edad362df350379606fdbf6c54bf6e522299f54543846838a4c34098068c4cf",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `jmespath` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/readers/fixtures/multi-with-invalid/requirements.txt"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "e9097d0082861e2608959a693162d671eac35820516d5dc450bdbc5390440ae2",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `pyyaml` violates policy `ossf-maintained`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/pkg/readers/fixtures/multi-with-invalid/requirements.txt"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "ossf-maintained",
+          "value": "ossf-maintained"
+        }
+      ]
+    },
+    {
+      "id": "3a7f3f45a8a8ca16bb2c031202ec40cc13d4b61fc1e423b755b92ec9bd18cfc6",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `flask` violates policy `safe-licenses`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/test/scenarios/fixtures/code/requirements.txt"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "safe-licenses",
+          "value": "safe-licenses"
+        }
+      ]
+    },
+    {
+      "id": "e92ffa7d0cbdac605ff94998eea539f3a2e56a9701a07f4c4e6edf26009854c3",
+      "category": "sast",
+      "description": "## Policy Violation\nPackage `langchain` violates policy `critical-vuln`.\n\n",
+      "severity": "Medium",
+      "scanner": {
+        "id": "",
+        "name": ""
+      },
+      "location": {
+        "file": "media/kunalsin9h/hdd_drive/safedep/vet/test/scenarios/fixtures/code/requirements.txt"
+      },
+      "identifiers": [
+        {
+          "type": "_id",
+          "name": "critical-vuln",
+          "value": "critical-vuln"
+        }
+      ]
+    }
+  ],
+  "scan": {
+    "analyzer": {
+      "id": "sarif-converter",
+      "name": "SARIF Converter",
+      "vendor": {
+        "name": "SARIF Converter"
+      },
+      "version": "0.9.4"
+    },
+    "scanner": {
+      "id": "vet",
+      "name": "vet",
+      "vendor": {
+        "name": "vet"
+      },
+      "version": "v1.9.6"
+    },
+    "type": "sast",
+    "start_time": "2025-03-24T13:05:08",
+    "end_time": "2025-03-24T13:05:08",
+    "status": "success"
+  }
+}

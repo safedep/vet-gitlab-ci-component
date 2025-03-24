@@ -9,7 +9,8 @@ spec:
     policy:
       description: 'Path to policy file, default policy will be used when not given'
       type: string 
-      default: '.gitlab/vet/policy.yml'
+      default: '.gitlab/vet/policy.yml' # For now we don't want to use a default policy, since we are using sarif then sarif-converter which will use the default policy
+      # later when we have our own gitlab-specific-report, then we can make this default to '.gitlab/vet/policy.yml', and optional
     version: 
       description: 'vet version to use for the scan. Defaults to using latest release'
       type: string
@@ -58,17 +59,21 @@ spec:
 ---
 
 vet_dependency_scanning:
+  stage: $[[ inputs.stage ]]
+  allow_failure: $[[ inputs.allow_failure ]]
   image: 
     name: ghcr.io/safedep/vet:$[[ inputs.version ]]
     entrypoint: [""] # by default vet's docker entrypoint is ["vet"] but we want to it as environment  / shell, so we override it to empty allowsing gitlab to work with it
-  stage: $[[ inputs.stage ]]
-  allow_failure: $[[ inputs.allow_failure ]]
+  before_script:
+    # Download sarif-converter for converting sarif report to gitlab specific dependency scanning report
+    - wget -O sarif-converter https://gitlab.com/ignis-build/sarif-converter/-/releases/permalink/latest/downloads/bin/sarif-converter-linux
+    - chmod +x sarif-converter
   variables:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
   script:
     - vet version
   artifacts:
     access: $[[ inputs.artifact_access ]]
-    reports: # This is required for Security Scanning, Docs: 
+    reports: # This is required for Security Scanning
       dependency_scanning: $ARTIFACT_FILENAME
     expire_in: 1 week
