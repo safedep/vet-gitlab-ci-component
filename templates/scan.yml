@@ -90,6 +90,7 @@ vet_dependency_scanning:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
   script:
     - vet version
+    - ./sarif-converter -v
     # - vet scan --policy $[[ inputs.policy ]] --output $ARTIFACT_FILENAME
     # - ./sarif-converter --input $ARTIFACT_FILENAME --output $ARTIFACT_FILENAME
     # - cat $ARTIFACT_FILENAME
