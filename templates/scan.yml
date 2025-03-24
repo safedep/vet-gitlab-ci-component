@@ -136,14 +136,12 @@ vet_dependency_scanning:
       CMD="$CMD --malware-analysis-timeout $[[ inputs.timeout ]]s"
     fi
 
-    # Add trusted registries if provided
-    if [[ "${#[[ inputs.trusted-registries ]]}" -gt 0 ]]; then
-      echo "Using trusted registries: ${[[ inputs.trusted-registries ]]}"
+    if [[ "$[[ inputs.trusted-registries | size ]]" -gt 0 ]]; then
+      echo "Using trusted registries"
       
-      # Loop through each registry in the array
-      for registry in "${[[ inputs.trusted-registries ]]}"; do
-        CMD="$CMD --trusted-registry $registry"
-      done
+      $[[ for registry in inputs.trusted-registries ]]
+      CMD="$CMD --trusted-registry $[[ registry ]]"
+      $[[ end ]]
     fi
 
     # Execute the final command
