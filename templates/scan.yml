@@ -10,6 +10,10 @@ spec:
       description: 'Path to policy file, default policy will be used when not given'
       type: string 
       default: '.gitlab/vet/policy.yml'
+    version: 
+      description: 'vet version to use for the scan. Defaults to using latest release'
+      type: string
+      default: latest
     cloud:
       description: 'Synchronize configuration, policy and report with SafeDep cloud'
       type: boolean
@@ -55,7 +59,7 @@ spec:
 
 vet_dependency_scanning:
   image: 
-    name: ghcr.io/safedep/vet:latest
+    name: ghcr.io/safedep/vet:$[[ inputs.version ]]
     entrypoint: [""] # by default vet's docker entrypoint is ["vet"] but we want to it as environment  / shell, so we override it to empty allowsing gitlab to work with it
   stage: $[[ inputs.stage ]]
   allow_failure: $[[ inputs.allow_failure ]]
@@ -63,7 +67,6 @@ vet_dependency_scanning:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
   script:
     - vet version
-    - ls -la
   artifacts:
     access: $[[ inputs.artifact_access ]]
     reports: # This is required for Security Scanning, Docs: 
