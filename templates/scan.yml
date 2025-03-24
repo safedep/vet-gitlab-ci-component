@@ -137,6 +137,13 @@ vet_dependency_scanning:
     fi
 
     # TODO: Add trusted registries if provided
+    if [[ "$[[ inputs.trusted-registries ]]" -gt 0 ]]; then
+      echo "Using trusted registries"
+      
+      for registry in "${[[ inputs.trusted-registries ]]}"; do
+        CMD="$CMD --trusted-registry $registry"
+      done
+    fi
 
     # Execute the final command
     $CMD
