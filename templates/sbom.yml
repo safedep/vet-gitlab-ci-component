@@ -1,5 +1,5 @@
 # This template is used to generate a SBOM for a project.
-# Report format is CycloneDX.
+# Report format is CycloneDX JSON.
 #
 # Input Specification
 # Docs: https://docs.gitlab.com/ci/yaml/#spec
@@ -61,10 +61,10 @@ vet_sbom:
   stage: $[[ inputs.stage ]]
   allow_failure: $[[ inputs.allow_failure ]]
   variables:
-    ARTIFACT_FILENAME: "gl-sbom-report.json"
+    ARTIFACT_FILENAME: "gl-sbom-report.cdx.json"
   script:
     - vet version
   artifacts:
     access: $[[ inputs.artifact_access ]]
     reports: # This is required for Security Scanning, Docs: 
-      sbom: $ARTIFACT_FILENAME
+      cyclonedx: $ARTIFACT_FILENAME
