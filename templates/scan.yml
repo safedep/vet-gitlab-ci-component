@@ -66,8 +66,8 @@ vet_dependency_scanning:
     entrypoint: [""] # by default vet's docker entrypoint is ["vet"] but we want to it as environment  / shell, so we override it to empty allowsing gitlab to work with it
   before_script:
     # Download sarif-converter for converting sarif report to gitlab specific dependency scanning report
-    - apt-get update
-    - apt-get install -y wget
+    - sudo apt-get update
+    - sudo apt-get install -y wget
     - wget -O sarif-converter https://gitlab.com/ignis-build/sarif-converter/-/releases/permalink/latest/downloads/bin/sarif-converter-linux
     - chmod +x sarif-converter
   variables:
