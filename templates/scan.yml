@@ -84,6 +84,24 @@ spec:
 
   echo "sarif-converter downloaded"
 
+# verify cloud config: check if key and tenant are provided when cloud is enabled
+.veirfy-cloud-config: &veirfy-cloud-config |
+  if [ "$[[ inputs.cloud ]]" = "true" ]; then
+    echo "Cloud synchronization enabled, checking required parameters..."
+    
+    if [ -z "$[[ inputs.cloud-key ]]" ]; then
+      echo "Error: cloud-key is required when cloud synchronization is enabled"
+      exit 1
+    fi
+    
+    if [ -z "$[[ inputs.cloud-tenant ]]" ]; then
+      echo "Error: cloud-tenant is required when cloud synchronization is enabled"
+      exit 1
+    fi
+    
+    echo "Cloud configuration validated successfully"
+  fi
+
 vet_dependency_scanning:
   stage: $[[ inputs.stage ]]
   allow_failure: $[[ inputs.allow_failure ]]
@@ -92,14 +110,13 @@ vet_dependency_scanning:
     entrypoint: [""] # by default vet's docker entrypoint is ["vet"] but we want to it as environment  / shell, so we override it to empty allowsing gitlab to work with it
   before_script:
     - *check-policy-file
+    - *veirfy-cloud-config
     - *download-wget
     - *download-sarif-converter
   variables:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
   script:
-    - vet version
-    - ./sarif-converter -v
-    # - vet scan --policy $[[ inputs.policy ]] --output $ARTIFACT_FILENAME
+    - vet scan --report-sarif $ARTIFACT_FILENAME --filter-suite $[[ inputs.policy ]]
     # - ./sarif-converter --input $ARTIFACT_FILENAME --output $ARTIFACT_FILENAME
     # - cat $ARTIFACT_FILENAME
   artifacts:
