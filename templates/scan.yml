@@ -138,10 +138,10 @@ vet_dependency_scanning:
 
     # Check if trusted-registries array has elements
     if [ ${#[[ inputs.trusted-registries ]]} -gt 0 ]; then
-      echo "Using trusted registries: $[[ inputs.trusted-registries | join(', ') ]]"
+      echo "Using trusted registries: ${[[ inputs.trusted-registries ]]}"
       
       # Add each registry to the command
-      for registry in $[[ inputs.trusted-registries | to_json ]]; do
+      for registry in "${[[ inputs.trusted-registries ]]}"; do
         CMD="$CMD --trusted-registry $registry"
       done
     fi
