@@ -1,4 +1,4 @@
-# vet - Policy Driven OSS Component Vetting
+# `vet` - Policy Driven OSS Component Vetting
 
 Gitlab CI component for [vet](https://github.com/safedep/vet). It allows policy
 driven vetting of OSS components against supply chain security risks.
@@ -9,21 +9,25 @@ driven vetting of OSS components against supply chain security risks.
 include:
   - component: gitlab.com/safedep/ci-components/vet/scan@<VERSION>
     inputs:
-      policy: '.gitlab/vet/policy.yml'
+      policy: '.gitlab/vet/policy.yml' # Required
+      cloud: true # Optional
+      cloud-key: $CLOUD_KEY
+      cloud-tenant: $CLOUD_TENANT
+      artifact-access: 'all'
 ```
 
 where `<VERSION>` is the latest released tag or `main`.
-
 
 ## Configuration Options
 
 The GitLab CI component accepts the following inputs:
 
-### Vet-Specific Inputs
+### `vet scan`
 
 | Input | Type | Default | Description |
 |-------|------|---------|-------------|
 | `policy` | string | `.gitlab/vet/policy.yml` | Path to policy file, default policy will be used when not given |
+| `version` | string | latest | Version of vet to use |
 | `cloud` | boolean | `false` | Synchronize configuration, policy and report with SafeDep cloud |
 | `cloud-key` | string | | API key to use for synchronizing report with SafeDep cloud |
 | `cloud-tenant` | string | | Tenant ID to use for synchronizing report with SafeDep cloud |
@@ -31,7 +35,7 @@ The GitLab CI component accepts the following inputs:
 | `trusted-registries` | array | `[]` | Comma separated list of trusted registry base URLs |
 | `timeout` | number | `300` | Timeout in seconds for vet to wait for external service results to be available. For malicious package analysis, this set the maximum time to wait for the analysis results to be available |
 
-### GitLab-Specific Inputs
+## CI Configuration
 
 | Input | Type | Default | Description |
 |-------|------|---------|-------------|
