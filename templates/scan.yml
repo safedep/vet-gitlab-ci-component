@@ -237,6 +237,7 @@ vet_dependency_scanning:
     name: ghcr.io/safedep/vet:$[[ inputs.version ]]
     entrypoint: [""] # by default vet's docker entrypoint is ["vet"] but we want to it as environment  / shell, so we override it to empty allowsing gitlab to work with it
   before_script:
+    - vet version
     - *check-policy-file
     - *check-exception-file
     - *veirfy-cloud-config
