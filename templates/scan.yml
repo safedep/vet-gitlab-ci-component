@@ -236,9 +236,6 @@ vet_dependency_scanning:
   before_script:
     - *check-policy-file
     - *check-exception-file
-    # - *download-curl-jq
-    # - *declare-variables-lockfile-patterns
-    # - *check-dependency-changes
     - *veirfy-cloud-config
   variables:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
