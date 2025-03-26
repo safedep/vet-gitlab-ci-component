@@ -82,6 +82,10 @@ spec:
     echo "Exception file found"
   fi
 
+# We need curl and jq to check for lockfile changes in merge request pipelines
+.download-curl-jq: &download-curl-jq |
+  apt-get update && apt-get install -y curl jq
+
 .download-wget: &download-wget |
   echo "Downloading wget"
 
@@ -121,6 +125,51 @@ spec:
     echo "Cloud configuration validated successfully"
   fi
 
+# Define lockfile patterns as a variable
+.declare-variables-lockfile-patterns: &declare-variables-lockfile-patterns |
+  LOCKFILE_PATTERNS=(
+    'Gemfile.lock',
+    'package-lock.json',
+    'yarn.lock',
+    'Pipfile.lock',
+    'poetry.lock',
+    'go.mod',
+    'pom.xml',
+    'gradle.lockfile',
+    'requirements.txt',
+    'pnpm-lock.yaml',
+    'uv.lock'
+  )
+
+# MERGER REQUEST SPECIFIC SCRIPT
+# For Merge Request, we only run vet when dependency are changed (throught checking lockfiles changes)
+# If no then return without scanning (no need)
+.check-dependency-changes: &check-dependency-changes |
+  if [ "$CI_PIPELINE_SOURCE" = "merge_request_event" ]; then
+    echo "Running in a merge request pipeline, checking for lockfile changes..."
+
+    # Get the list of changed files from the MR
+    CHANGED_FILES=$(curl --header "PRIVATE-TOKEN: $CI_JOB_TOKEN" \
+      "$CI_API_V4_URL/projects/$CI_PROJECT_ID/merge_requests/$CI_MERGE_REQUEST_IID/changes" | \
+      jq -r '.changes[].new_path')
+
+    # Create pattern string from array
+    PATTERN=$(IFS="|"; echo "${LOCKFILE_PATTERNS[*]}")
+    
+    # Check if any lockfiles are in the changed files
+    CHANGED_LOCKFILES=$(echo "$CHANGED_FILES" | grep -E "$PATTERN")
+
+    if [[ -z "$CHANGED_LOCKFILES" ]]; then
+      echo "No lockfiles changed in this MR, skipping dependency scan"
+      exit 0
+    else
+      echo "Lockfiles changed in this MR:"
+      echo "$CHANGED_LOCKFILES"
+      echo "Proceeding with dependency scan"
+    fi
+  fi
+
+# Initialize the vet command
 .setup-vet-command: &setup-vet-command |
   CMD="vet scan --report-sarif $REPORT_FILENAME --filter-suite $[[ inputs.policy ]]"
 
@@ -186,6 +235,9 @@ vet_dependency_scanning:
   before_script:
     - *check-policy-file
     - *check-exception-file
+    - *download-curl-jq
+    - *declare-variables-lockfile-patterns
+    - *check-dependency-changes
     - *veirfy-cloud-config
     - *download-wget
     - *download-sarif-converter
