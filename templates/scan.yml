@@ -108,6 +108,8 @@ spec:
 
 # verify cloud config: check if key and tenant are provided when cloud is enabled
 .veirfy-cloud-config: &veirfy-cloud-config |
+  echo "Verifying cloud config"
+
   if [ "$[[ inputs.cloud ]]" = "true" ]; then
     echo "Cloud synchronization enabled, checking required parameters..."
     
