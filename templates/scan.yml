@@ -71,6 +71,8 @@ spec:
 
 # If exception file is provided, check if it exists
 .check-exception-file: &check-exception-file |
+  echo "Checking exception file: $[[ inputs.exception-file ]]"
+
   if [ ! -z "$[[ inputs.exception-file ]]" ]; then
     echo "Checking exception file: $[[ inputs.exception-file ]]"
 
@@ -84,6 +86,8 @@ spec:
 
 # We need curl and jq to check for lockfile changes in merge request pipelines
 .download-curl-jq: &download-curl-jq |
+  echo "Downloading curl and jq"
+
   apt-get update && apt-get install -y curl jq
 
 .download-wget: &download-wget |
@@ -127,6 +131,8 @@ spec:
 
 # Define lockfile patterns as a variable
 .declare-variables-lockfile-patterns: &declare-variables-lockfile-patterns |
+  echo "Declaring lockfile patterns"
+
   LOCKFILE_PATTERNS=(
     'Gemfile.lock',
     'package-lock.json',
@@ -145,6 +151,8 @@ spec:
 # For Merge Request, we only run vet when dependency are changed (throught checking lockfiles changes)
 # If no then return without scanning (no need)
 .check-dependency-changes: &check-dependency-changes |
+  echo "Checking dependency changes"
+
   if [ "$CI_PIPELINE_SOURCE" = "merge_request_event" ]; then
     echo "Running in a merge request pipeline, checking for lockfile changes..."
 
@@ -171,10 +179,14 @@ spec:
 
 # Initialize the vet command
 .setup-vet-command: &setup-vet-command |
+  echo "Setting up vet command"
+
   CMD="vet scan --report-sarif $REPORT_FILENAME --filter-suite $[[ inputs.policy ]]"
 
 # Add cloud sync flags if cloud is enabled
 .add-cloud-sync-flags: &add-cloud-sync-flags |
+  echo "Adding cloud sync flags"
+
   if [[ "$[[ inputs.cloud ]]" == "true" ]]; then
     CMD="$CMD --report-sync"
     CMD="$CMD --report-sync-project $CI_PROJECT_PATH"
@@ -188,6 +200,8 @@ spec:
 
 # Add trusted registries if provided
 .add-trusted-registries: &add-trusted-registries |
+  echo "Adding trusted registries"
+
   if [[ "$[[ inputs.trusted-registries ]]" -gt 0 ]]; then
     echo "Using trusted registries"
     
@@ -198,6 +212,8 @@ spec:
 
 # Add exception file if provided
 .add-exception-file: &add-exception-file |
+  echo "Adding exception file"
+
   if [ ! -z "$[[ inputs.exception-file ]]" ]; then
     echo "Using exception file: $[[ inputs.exception-file ]]"
     CMD="$CMD --exceptions $[[ inputs.exception-file ]]"
@@ -205,6 +221,8 @@ spec:
 
 # Execute the final command
 .execute-vet-command: &execute-vet-command |
+  echo "Executing vet command"
+
   $CMD
 
 # Check if SARIF report file exists
