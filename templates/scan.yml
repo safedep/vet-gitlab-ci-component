@@ -56,18 +56,21 @@ spec:
       type: boolean
       default: true
 ---
-# For now policy file is required, but in future we can make it optional
-# Since we are generating sarif report
-# TODO: only check if its input is provided
+
+# If policy file is provided, check if it exists
 .check-policy-file: &check-policy-file |
   echo "Checking policy file: $[[ inputs.policy ]]"
 
-  if [ ! -f $[[ inputs.policy ]] ]; then
-    echo "Policy file not found: $[[ inputs.policy ]]"
-    exit 1
-  fi
+  if [ ! -z "$[[ inputs.policy ]]" ]; then
+    echo "Checking policy file: $[[ inputs.policy ]]"
 
-  echo "Policy file found"
+    if [ ! -f "$[[ inputs.policy ]]" ]; then
+      echo "Policy file not found: $[[ inputs.policy ]]"
+      exit 1
+    fi
+
+    echo "Policy file found"
+  fi
 
 # If exception file is provided, check if it exists
 .check-exception-file: &check-exception-file |
@@ -89,22 +92,6 @@ spec:
   echo "Downloading curl and jq"
 
   apt-get update && apt-get install -y curl jq
-
-.download-wget: &download-wget |
-  echo "Downloading wget"
-
-  apt-get update && apt-get install -y wget
-
-  echo "wget downloaded"
-
-# Download sarif-converter for converting sarif report to gitlab specific dependency scanning report 
-.download-sarif-converter: &download-sarif-converter |
-  echo "Downloading sarif-converter"
-
-  wget -O sarif-converter https://gitlab.com/ignis-build/sarif-converter/-/releases/v0.9.4/downloads/bin/sarif-converter-linux-amd64
-  chmod +x sarif-converter
-
-  echo "sarif-converter downloaded"
 
 # verify cloud config: check if key and tenant are provided when cloud is enabled
 .veirfy-cloud-config: &veirfy-cloud-config |
@@ -183,11 +170,20 @@ spec:
 .setup-vet-command: &setup-vet-command |
   echo "Setting up vet command"
 
-  CMD="vet scan --report-sarif $REPORT_FILENAME --filter-suite $[[ inputs.policy ]]"
+  CMD="vet scan --report-gitlab $ARTIFACT_FILENAME"
+
+.add-policy-file: &add-policy-file |
+  echo "Checking policy file to add to vet command"
+
+  if [ ! -z "$[[ inputs.policy ]]" ]; then
+    CMD="$CMD --filter-suite $[[ inputs.policy ]]"
+
+    echo "Added policy file: $[[ inputs.policy ]]"
+  fi
 
 # Add cloud sync flags if cloud is enabled
 .add-cloud-sync-flags: &add-cloud-sync-flags |
-  echo "Adding cloud sync flags"
+  echo "Checking if cloud sync is enabled"
 
   if [[ "$[[ inputs.cloud ]]" == "true" ]]; then
     CMD="$CMD --report-sync"
@@ -198,6 +194,8 @@ spec:
 
     CMD="$CMD --malware"
     CMD="$CMD --malware-analysis-timeout $[[ inputs.timeout ]]s"
+
+    echo "Added cloud sync flags"
   fi
 
 # Add trusted registries if provided
@@ -207,11 +205,12 @@ spec:
 
 # Add exception file if provided
 .add-exception-file: &add-exception-file |
-  echo "Adding exception file"
+  echo "Checking if exception file is provided"
 
   if [ ! -z "$[[ inputs.exception-file ]]" ]; then
-    echo "Using exception file: $[[ inputs.exception-file ]]"
     CMD="$CMD --exceptions $[[ inputs.exception-file ]]"
+
+    echo "Added exception file: $[[ inputs.exception-file ]]"
   fi
 
 # Execute the final command
@@ -220,24 +219,16 @@ spec:
 
   $CMD
 
-# Check if SARIF report file exists
-.check-sarif-report: &check-sarif-report |
-  if [ ! -f $REPORT_FILENAME ]; then
-    echo "Error: SARIF report file not found: $REPORT_FILENAME"
-    exit 1
-  fi
-
-# Convert SARIF report to GitLab specific format
-.convert-sarif-report: &convert-sarif-report |
-  ./sarif-converter --type sast $REPORT_FILENAME $ARTIFACT_FILENAME
-
-
 # Check if artifact file exists
 .check-artifact-file: &check-artifact-file |
+  echo "Checking if artifact file exists"
+
   if [ ! -f $ARTIFACT_FILENAME ]; then
     echo "Error: Artifact file not found: $ARTIFACT_FILENAME"
     exit 1
   fi
+
+  echo "Artifact file exists"
 
 vet_dependency_scanning:
   stage: $[[ inputs.stage ]]
@@ -248,27 +239,23 @@ vet_dependency_scanning:
   before_script:
     - *check-policy-file
     - *check-exception-file
-    - *download-curl-jq
-    - *declare-variables-lockfile-patterns
-    - *check-dependency-changes
+    # - *download-curl-jq
+    # - *declare-variables-lockfile-patterns
+    # - *check-dependency-changes
     - *veirfy-cloud-config
-    - *download-wget
-    - *download-sarif-converter
   variables:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
-    REPORT_FILENAME: "local-report.sarif"
   script: 
     - *setup-vet-command
+    - *add-policy-file
+    - *add-exception-file
     - *add-cloud-sync-flags
     - *add-trusted-registries
-    - *add-exception-file
     - *execute-vet-command
-    - *check-sarif-report
-    - *convert-sarif-report
     - *check-artifact-file
   artifacts:
     access: $[[ inputs.artifact_access ]]
-    reports: # This is required for Security Scanning
-      sast: $ARTIFACT_FILENAME
+    reports: 
+      dependency_scanning: $ARTIFACT_FILENAME
     expire_in: 1 week
 
