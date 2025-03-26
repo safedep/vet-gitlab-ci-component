@@ -141,14 +141,17 @@ spec:
 # If no then return without scanning (no need)
 .check-dependency-changes: &check-dependency-changes |
   echo "Checking dependency changes"
+  echo "CI_PIPELINE_SOURCE: $CI_PIPELINE_SOURCE"
 
   if [ "$CI_PIPELINE_SOURCE" == "merge_request_event" ]; then
     echo "Running in a merge request pipeline, checking for lockfile changes..."
 
-    # Get the list of changed files from the MR
-    CHANGED_FILES=$(curl --header "PRIVATE-TOKEN: $CI_JOB_TOKEN" \
-      "$CI_API_V4_URL/projects/$CI_PROJECT_ID/merge_requests/$CI_MERGE_REQUEST_IID/changes" | \
-      jq -r '.changes[].new_path')
+    RESPONSE=$(curl --fail --header "PRIVATE-TOKEN: $CI_JOB_TOKEN" \
+      "$CI_API_V4_URL/projects/$CI_PROJECT_ID/merge_requests/$CI_MERGE_REQUEST_IID/changes" || echo "API call failed")
+
+    echo "API Response: $RESPONSE"
+
+    CHANGED_FILES=$(echo "$RESPONSE" | jq -r '.changes[].new_path' 2>/dev/null || echo "jq parsing failed")
 
     # Create pattern string from array
     PATTERN=$(IFS="|"; echo "${LOCKFILE_PATTERNS[*]}")
