@@ -8,9 +8,16 @@ driven vetting of OSS components against supply chain security risks.
 ```yaml
 include:
   - component: gitlab.com/safedep/ci-components/vet/scan@<VERSION>
+```
+
+#### Using Inputs
+
+```yaml
+include:
+  - component: gitlab.com/safedep/ci-components/vet/scan@<VERSION>
     inputs:
-      policy: '.gitlab/vet/policy.yml' # Required
-      cloud: true # Optional
+      policy: '.gitlab/vet/policy.yml' 
+      cloud: true
       cloud-key: $CLOUD_KEY
       cloud-tenant: $CLOUD_TENANT
       artifact-access: 'all'
