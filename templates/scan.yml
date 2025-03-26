@@ -121,6 +121,62 @@ spec:
     echo "Cloud configuration validated successfully"
   fi
 
+.setup-vet-command: &setup-vet-command |
+  CMD="vet scan --report-sarif $REPORT_FILENAME --filter-suite $[[ inputs.policy ]]"
+
+# Add cloud sync flags if cloud is enabled
+.add-cloud-sync-flags: &add-cloud-sync-flags |
+  if [[ "$[[ inputs.cloud ]]" == "true" ]]; then
+    CMD="$CMD --report-sync"
+    CMD="$CMD --report-sync-project $CI_PROJECT_PATH"
+    CMD="$CMD --report-sync-project-version $CI_COMMIT_REF_NAME"
+
+    echo "Activating malicious package analysis with timeout: $[[ inputs.timeout ]]s"
+
+    CMD="$CMD --malware"
+    CMD="$CMD --malware-analysis-timeout $[[ inputs.timeout ]]s"
+  fi
+
+# Add trusted registries if provided
+.add-trusted-registries: &add-trusted-registries |
+  if [[ "$[[ inputs.trusted-registries ]]" -gt 0 ]]; then
+    echo "Using trusted registries"
+    
+    for registry in "${[[ inputs.trusted-registries ]]}"; do
+      CMD="$CMD --trusted-registry $registry"
+    done
+  fi
+
+# Add exception file if provided
+.add-exception-file: &add-exception-file |
+  if [ ! -z "$[[ inputs.exception-file ]]" ]; then
+    echo "Using exception file: $[[ inputs.exception-file ]]"
+    CMD="$CMD --exceptions $[[ inputs.exception-file ]]"
+  fi
+
+# Execute the final command
+.execute-vet-command: &execute-vet-command |
+  $CMD
+
+# Check if SARIF report file exists
+.check-sarif-report: &check-sarif-report |
+  if [ ! -f $REPORT_FILENAME ]; then
+    echo "Error: SARIF report file not found: $REPORT_FILENAME"
+    exit 1
+  fi
+
+# Convert SARIF report to GitLab specific format
+.convert-sarif-report: &convert-sarif-report |
+  ./sarif-converter --type sast $REPORT_FILENAME $ARTIFACT_FILENAME
+
+
+# Check if artifact file exists
+.check-artifact-file: &check-artifact-file |
+  if [ ! -f $ARTIFACT_FILENAME ]; then
+    echo "Error: Artifact file not found: $ARTIFACT_FILENAME"
+    exit 1
+  fi
+
 vet_dependency_scanning:
   stage: $[[ inputs.stage ]]
   allow_failure: $[[ inputs.allow_failure ]]
@@ -136,53 +192,15 @@ vet_dependency_scanning:
   variables:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
     REPORT_FILENAME: "local-report.sarif"
-  script: |
-    CMD="vet scan --report-sarif $REPORT_FILENAME --filter-suite $[[ inputs.policy ]]"
-    
-    # Add cloud sync flags if cloud is enabled
-    if [[ "$[[ inputs.cloud ]]" == "true" ]]; then
-      CMD="$CMD --report-sync"
-      CMD="$CMD --report-sync-project $CI_PROJECT_PATH"
-      CMD="$CMD --report-sync-project-version $CI_COMMIT_REF_NAME"
-
-      echo "Activating malicious package analysis with timeout: $[[ inputs.timeout ]]s"
-
-      CMD="$CMD --malware"
-      CMD="$CMD --malware-analysis-timeout $[[ inputs.timeout ]]s"
-    fi
-
-    # Add trusted registries if provided
-    if [[ "$[[ inputs.trusted-registries ]]" -gt 0 ]]; then
-      echo "Using trusted registries"
-      
-      for registry in "${[[ inputs.trusted-registries ]]}"; do
-        CMD="$CMD --trusted-registry $registry"
-      done
-    fi
-
-    # Add exception file if provided
-    if [ ! -z "$[[ inputs.exception-file ]]" ]; then
-      echo "Using exception file: $[[ inputs.exception-file ]]"
-      CMD="$CMD --exceptions $[[ inputs.exception-file ]]"
-    fi
-
-    # Execute the final command
-    $CMD
-
-    # Check if SARIF report file exists
-    if [ ! -f $REPORT_FILENAME ]; then
-      echo "Error: SARIF report file not found: $REPORT_FILENAME"
-      exit 1
-    fi
-
-    # Convert SARIF report to GitLab specific format
-    ./sarif-converter --type sast $REPORT_FILENAME $ARTIFACT_FILENAME
-
-    # Check if artifact file exists
-    if [ ! -f $ARTIFACT_FILENAME ]; then
-      echo "Error: Artifact file not found: $ARTIFACT_FILENAME"
-      exit 1
-    fi
+  script: 
+    - *setup-vet-command
+    - *add-cloud-sync-flags
+    - *add-trusted-registries
+    - *add-exception-file
+    - *execute-vet-command
+    - *check-sarif-report
+    - *convert-sarif-report
+    - *check-artifact-file
   artifacts:
     access: $[[ inputs.artifact_access ]]
     reports: # This is required for Security Scanning
