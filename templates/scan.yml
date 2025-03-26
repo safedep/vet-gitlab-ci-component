@@ -201,17 +201,7 @@ spec:
 # Add trusted registries if provided
 .add-trusted-registries: &add-trusted-registries |
   echo "Adding trusted registries"
-
-  # Check if trusted-registries is defined and not empty
-  if [[ "$[[ inputs.trusted-registries ]]" != "[]" ]]; then
-    echo "Using trusted registries"
-    
-    $[[ each registry in inputs.trusted-registries ]]
-    CMD="$CMD --trusted-registry $[[ registry.value ]]"
-    $[[ end ]]
-  fi
-
-
+  echo "Not Supported Yet"
 
 # Add exception file if provided
 .add-exception-file: &add-exception-file |
