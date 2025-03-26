@@ -202,13 +202,14 @@ spec:
 .add-trusted-registries: &add-trusted-registries |
   echo "Adding trusted registries"
 
-  if [[ "$[[ inputs.trusted-registries ]]" -gt 0 ]]; then
+  if [[ "$[[ inputs.trusted-registries | size ]]" -gt 0 ]]; then
     echo "Using trusted registries"
     
-    for registry in "${[[ inputs.trusted-registries ]]}"; do
-      CMD="$CMD --trusted-registry $registry"
-    done
+    $[[ for registry in inputs.trusted-registries ]]
+    CMD="$CMD --trusted-registry $[[ registry ]]"
+    $[[ end ]]
   fi
+
 
 # Add exception file if provided
 .add-exception-file: &add-exception-file |
