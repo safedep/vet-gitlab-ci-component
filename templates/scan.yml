@@ -57,35 +57,32 @@ spec:
       default: true
 ---
 
-# If policy file is provided, check if it exists
-.check-policy-file: &check-policy-file |
-  echo "Checking policy file: $[[ inputs.policy ]]"
+# For inputs files, check if they exist if input is provided
+.ensure-input-file-exists: &ensure-input-file-exists |
+  echo "Checking if file exists: $INPUT_FILE_VARIABLE"
 
-  if [ ! -z "$[[ inputs.policy ]]" ]; then
-    echo "Checking policy file: $[[ inputs.policy ]]"
+  if [ ! -z "$INPUT_FILE_VARIABLE" ]; then
+    echo "Checking file: $INPUT_FILE_VARIABLE"
 
-    if [ ! -f "$[[ inputs.policy ]]" ]; then
-      echo "Policy file not found: $[[ inputs.policy ]]"
+    if [ ! -f "$INPUT_FILE_VARIABLE" ]; then
+      echo "File not found: $INPUT_FILE_VARIABLE"
       exit 1
     fi
 
-    echo "Policy file found"
+    echo "File found"
   fi
+
+# If policy file is provided, check if it exists
+.check-policy-file: &check-policy-file 
+  <<: *ensure-input-file-exists
+  variables:
+    INPUT_FILE_VARIABLE: $[[ inputs.policy ]]
 
 # If exception file is provided, check if it exists
-.check-exception-file: &check-exception-file |
-  echo "Checking exception file: $[[ inputs.exception-file ]]"
-
-  if [ ! -z "$[[ inputs.exception-file ]]" ]; then
-    echo "Checking exception file: $[[ inputs.exception-file ]]"
-
-    if [ ! -f "$[[ inputs.exception-file ]]" ]; then
-      echo "Exception file not found: $[[ inputs.exception-file ]]"
-      exit 1
-    fi
-
-    echo "Exception file found"
-  fi
+.check-exception-file: &check-exception-file 
+  <<: *ensure-input-file-exists
+  variables:
+    INPUT_FILE_VARIABLE: $[[ inputs.exception-file ]]
 
 # We need curl and jq to check for lockfile changes in merge request pipelines
 .download-curl-jq: &download-curl-jq |
