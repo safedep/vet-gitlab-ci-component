@@ -142,8 +142,10 @@ spec:
 .check-dependency-changes: &check-dependency-changes |
   echo "Checking dependency changes"
   echo "CI_PIPELINE_SOURCE: $CI_PIPELINE_SOURCE"
+  echo "CI_BRANCH_NAME: $CI_BRANCH_NAME"
+  echo "CI_DEFAULT_BRANCH: $CI_DEFAULT_BRANCH"
 
-  if [ "$CI_PIPELINE_SOURCE" == "merge_request_event" ]; then
+  if [ "$CI_BRANCH_NAME" != "$CI_DEFAULT_BRANCH" ]; then
     echo "Running in a merge request pipeline, checking for lockfile changes..."
 
     RESPONSE=$(curl --fail --header "PRIVATE-TOKEN: $CI_JOB_TOKEN" \
