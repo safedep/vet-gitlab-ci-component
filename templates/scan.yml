@@ -142,7 +142,7 @@ spec:
 .check-dependency-changes: &check-dependency-changes |
   echo "Checking dependency changes"
 
-  if [ "$CI_PIPELINE_SOURCE" = "merge_request_event" ]; then
+  if [ "$CI_PIPELINE_SOURCE" == "merge_request_event" ]; then
     echo "Running in a merge request pipeline, checking for lockfile changes..."
 
     # Get the list of changed files from the MR
