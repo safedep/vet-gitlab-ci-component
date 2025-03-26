@@ -117,16 +117,16 @@ spec:
   echo "Declaring lockfile patterns"
 
   LOCKFILE_PATTERNS=(
-    'Gemfile.lock',
-    'package-lock.json',
-    'yarn.lock',
-    'Pipfile.lock',
-    'poetry.lock',
-    'go.mod',
-    'pom.xml',
-    'gradle.lockfile',
-    'requirements.txt',
-    'pnpm-lock.yaml',
+    'Gemfile.lock'
+    'package-lock.json'
+    'yarn.lock'
+    'Pipfile.lock'
+    'poetry.lock'
+    'go.mod'
+    'pom.xml'
+    'gradle.lockfile'
+    'requirements.txt'
+    'pnpm-lock.yaml'
     'uv.lock'
   )
 
@@ -165,6 +165,8 @@ spec:
       echo "Proceeding with dependency scan"
     fi
   fi
+
+  echo "Dependency changes checked"
 
 # Initialize the vet command
 .setup-vet-command: &setup-vet-command |

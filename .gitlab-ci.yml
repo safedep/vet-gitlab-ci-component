@@ -13,7 +13,7 @@ variables:
   SBOM_JOB_NAME: "vet_sbom"
 
 .ensure-job-added: &ensure-job-added
-  stage: test
+  stage: .pre
   image: badouralix/curl-jq
   script:
     - echo "Expect that a job named '$JOB_NAME' is added to the pipeline"
@@ -41,6 +41,7 @@ ensure-job-added-sbom:
 # Ensure that a project description exists, because it will be important to display
 # the resource in the catalog.
 check-description:
+  stage: .pre
   image: badouralix/curl-jq
   script:
     - |
@@ -59,9 +60,15 @@ check-description:
 # Ensure that a `README.md` exists in the root directory as it represents the
 # documentation for the whole components repository.
 check-readme:
+  stage: .pre
   image: busybox
   script: ls README.md || (echo "Please add a README.md file" && exit 1)
 
+# Test Different Functionality of the Scanner
+scanner-tests:
+  stage: test
+  script:
+    - echo "Running Scanner Tests"
 
 # Rlease is Required (specialy `release` keyword) for publishing CI Component To CI / CD Catalog
 # See: https://docs.gitlab.com/ci/components/#publish-a-new-release
