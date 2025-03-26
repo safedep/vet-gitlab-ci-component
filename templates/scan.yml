@@ -206,8 +206,8 @@ spec:
   if [[ "$[[ inputs.trusted-registries ]]" != "[]" ]]; then
     echo "Using trusted registries"
     
-    $[[ for registry in inputs.trusted-registries ]]
-    CMD="$CMD --trusted-registry $[[ registry ]]"
+    $[[ each registry in inputs.trusted-registries ]]
+    CMD="$CMD --trusted-registry $[[ registry.value ]]"
     $[[ end ]]
   fi
 
