@@ -33,7 +33,7 @@ The GitLab CI component accepts the following inputs:
 
 | Input | Type | Default | Description |
 |-------|------|---------|-------------|
-| `policy` | string | `.gitlab/vet/policy.yml` | Path to policy file, default policy will be used when not given |
+| `policy` | string |  | Path to policy file, default policy will be used when not given |
 | `version` | string | latest | Version of vet to use |
 | `cloud` | boolean | `false` | Synchronize configuration, policy and report with SafeDep cloud |
 | `cloud-key` | string | | API key to use for synchronizing report with SafeDep cloud |

@@ -9,7 +9,7 @@ spec:
     policy:
       description: 'Path to policy file, default policy will be used when not given'
       type: string 
-      default: '.gitlab/vet/policy.yml'
+      default: ''
     version: 
       description: 'vet version to use for the scan. Defaults to using latest release'
       type: string
