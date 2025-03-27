@@ -207,7 +207,6 @@ vet_dependency_scanning:
     VET_CONTROL_TOWER_TENANT_ID: $[[ inputs.cloud-tenant ]]
   script: 
     - vet version
-    - *debug-branch
     - *check-policy-file
     - *check-exception-file
     - *veirfy-cloud-config
@@ -228,15 +227,17 @@ vet_dependency_scanning:
       when: always
     - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
       changes:
-        - Gemfile.lock
-        - yarn.lock
-        - Pipfile.lock
-        - poetry.lock
-        - go.mod
-        - pom.xml
-        - gradle.lockfile
-        - requirements.txt
-        - pnpm-lock.yaml
-        - uv.lock
-      when: never
+        compare_to: 'refs/heads/main'
+        paths:
+          - Gemfile.lock
+          - yarn.lock
+          - Pipfile.lock
+          - poetry.lock
+          - go.mod
+          - pom.xml
+          - gradle.lockfile
+          - requirements.txt
+          - pnpm-lock.yaml
+          - uv.lock
+      when: on_success
     - when: never
