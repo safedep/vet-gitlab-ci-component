@@ -56,6 +56,50 @@ spec:
       type: boolean
       default: true
 ---
+# We need curl and jq to check for lockfile changes in merge request pipelines
+.download-jq: &download-jq |
+  echo "Downloading jq"
+
+  apt-get update && apt-get install -y jq
+
+
+# PRE CHECK
+# MERGER REQUEST SPECIFIC SCRIPT
+# For Merge Request, we only run vet when dependency are changed (throught checking lockfiles changes)
+# If no then return without scanning (no need)
+check-dependency-changes:
+  stage: .pre
+  before_script:
+    - *download-jq
+  script:
+    - echo "Checking dependency changes..."
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+      changes:
+        - Gemfile.lock
+        - yarn.lock
+        - Pipfile.lock
+        - poetry.lock
+        - go.mod
+        - pom.xml
+        - gradle.lockfile
+        - requirements.txt
+        - pnpm-lock.yaml
+        - uv.lock
+      when: always
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
+      changes:
+        - Gemfile.lock
+        - yarn.lock
+        - Pipfile.lock
+        - poetry.lock
+        - go.mod
+        - pom.xml
+        - gradle.lockfile
+        - requirements.txt
+        - pnpm-lock.yaml
+        - uv.lock
+      when: always
 
 # If policy file is provided, check if it exists
 .check-policy-file: &check-policy-file | 
@@ -111,42 +155,6 @@ spec:
     
     echo "Cloud configuration validated successfully"
   fi
-
-# Define lockfile patterns as a variable
-.declare-variables-lockfile-patterns: &declare-variables-lockfile-patterns |
-  echo "Declaring lockfile patterns"
-
-  LOCKFILE_PATTERNS=(
-    'Gemfile.lock'
-    'package-lock.json'
-    'yarn.lock'
-    'Pipfile.lock'
-    'poetry.lock'
-    'go.mod'
-    'pom.xml'
-    'gradle.lockfile'
-    'requirements.txt'
-    'pnpm-lock.yaml'
-    'uv.lock'
-  )
-
-# We need curl and jq to check for lockfile changes in merge request pipelines
-.download-jq: &download-jq |
-  echo "Downloading jq"
-
-  apt-get update && apt-get install -y jq
-
-# MERGER REQUEST SPECIFIC SCRIPT
-# For Merge Request, we only run vet when dependency are changed (throught checking lockfiles changes)
-# If no then return without scanning (no need)
-.check-dependency-changes: &check-dependency-changes |
-  echo "Checking dependency changes"
-
-  if [ "$CI_COMMIT_BRANCH" != "$CI_DEFAULT_BRANCH" ]; then
-    echo "Running in a merge request pipeline, checking for lockfile changes..."
-  fi
-
-  echo "Dependency changes checked"
 
 # Initialize the vet command
 .setup-vet-command: &setup-vet-command |
@@ -242,9 +250,6 @@ vet_dependency_scanning:
     - *check-policy-file
     - *check-exception-file
     - *veirfy-cloud-config
-    - *download-jq
-    - *declare-variables-lockfile-patterns
-    - *check-dependency-changes
   variables:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
     VET_API_KEY: $[[ inputs.cloud-key ]]
