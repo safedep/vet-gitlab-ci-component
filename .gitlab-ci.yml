@@ -3,7 +3,9 @@ include:
   - component: $CI_SERVER_FQDN/$CI_PROJECT_PATH/scan@$CI_COMMIT_SHA
     inputs:
       cloud: false
+      always-run: true
   - component: $CI_SERVER_FQDN/$CI_PROJECT_PATH/sbom@$CI_COMMIT_SHA
+
 
 stages: [test, release]
 

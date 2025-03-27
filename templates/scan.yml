@@ -55,6 +55,10 @@ spec:
       description: 'Whether the scanning job is allowed to fail' 
       type: boolean
       default: true
+    always-run:
+      description: 'Whether the scanning job should always run'
+      type: boolean
+      default: false
 ---
 # If policy file is provided, check if it exists
 .check-policy-file: &check-policy-file | 
@@ -226,7 +230,7 @@ vet_dependency_scanning:
 
   rules:
     # Always run on default branch (main)
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH 
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH || $[[ inputs.always-run ]]
       when: always
 
     # For non-default branches, run when dependency files change
@@ -243,6 +247,3 @@ vet_dependency_scanning:
         - pnpm-lock.yaml
         - uv.lock
       when: always
-
-    # Include the job but skip execution for all other cases
-    - when: never
