@@ -207,6 +207,8 @@ vet_dependency_scanning:
     VET_CONTROL_TOWER_TENANT_ID: $[[ inputs.cloud-tenant ]]
   before_script:
     - vet version
+    - echo "Commit branch: $CI_COMMIT_BRANCH"
+    - echo "Default branch: $CI_DEFAULT_BRANCH"
     - *check-policy-file
     - *check-exception-file
     - *veirfy-cloud-config
@@ -217,7 +219,6 @@ vet_dependency_scanning:
     - *add-cloud-sync-flags
     - *add-trusted-registries
     - *execute-vet-command
-  after_script:
     - *check-artifact-file
   artifacts:
     access: $[[ inputs.artifact-access ]]
@@ -227,7 +228,8 @@ vet_dependency_scanning:
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       when: always
-    - changes:
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
+      changes:
         - Gemfile.lock
         - yarn.lock
         - Pipfile.lock
@@ -239,4 +241,4 @@ vet_dependency_scanning:
         - pnpm-lock.yaml
         - uv.lock
       when: on_success
-    - when: never  # Skip in all other cases
+    - when: never
