@@ -55,11 +55,8 @@ spec:
       description: 'Whether the scanning job is allowed to fail' 
       type: boolean
       default: true
-    always-run:
-      description: 'Whether the scanning job should always run, regardless of whether the dependency files have changed'
-      type: boolean
-      default: false
 ---
+
 # If policy file is provided, check if it exists
 .check-policy-file: &check-policy-file | 
   echo "Checking if policy file exists: $[[ inputs.policy ]]"
@@ -228,10 +225,6 @@ vet_dependency_scanning:
       dependency_scanning: $ARTIFACT_FILENAME
     expire_in: 1 week
   rules:
-    - if: $[[ inputs.always-run ]] == "true"
-      when: always
-
-    # Always run on default branch OR when always-run is true
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       when: always
 
