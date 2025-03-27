@@ -205,7 +205,8 @@ spec:
 # Add trusted registries if provided
 .add-trusted-registries: &add-trusted-registries |
   echo "Adding trusted registries"
-  echo "Not Supported Yet"
+
+  echo "Trusted registries: $[[ inputs.trusted-registries ]]"
 
 # Add exception file if provided
 .add-exception-file: &add-exception-file |
