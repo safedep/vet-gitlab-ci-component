@@ -17,11 +17,6 @@ variables:
   script:
     - echo "Expect that a job named '$JOB_NAME' is added to the pipeline"
     - |
-      if [ "$SHOULD_ADDED" = "false" ]; then
-        echo "Skipping job '$JOB_NAME' because it should not be added"
-        exit 0
-      fi
-
       route="${CI_API_V4_URL}/projects/$CI_PROJECT_ID/pipelines/$CI_PIPELINE_ID/jobs"
       if curl --silent --header "JOB-TOKEN: $CI_JOB_TOKEN" $route | jq -e "any(.name | contains(\"$JOB_NAME\"))" > /dev/null; then
         echo "Component Job '$JOB_NAME' is present"
