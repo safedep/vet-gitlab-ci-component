@@ -219,7 +219,7 @@ spec:
     fi
   done
 
-  echo "Trusted registries: $[[ inputs.trusted-registries ]]"
+  echo "Added trusted registries"
 
 # Add exception file if provided
 .add-exception-file: &add-exception-file |
