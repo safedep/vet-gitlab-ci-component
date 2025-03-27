@@ -225,13 +225,7 @@ vet_dependency_scanning:
       dependency_scanning: $ARTIFACT_FILENAME
     expire_in: 1 week
   rules:
-    # Run when its main/master branch
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-      when: always
-
-    # For other cases, run when dependency files change
-    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
-      changes:
+    - changes:
         - Gemfile.lock
         - yarn.lock
         - Pipfile.lock
@@ -242,7 +236,3 @@ vet_dependency_scanning:
         - requirements.txt
         - pnpm-lock.yaml
         - uv.lock
-      when: always
-
-    # Else skip the job
-    - when: never
