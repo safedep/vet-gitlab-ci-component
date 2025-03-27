@@ -56,6 +56,15 @@ spec:
       type: boolean
       default: true
 ---
+# Check vet version (ensure it is installed)
+.check-vet-version: &check-vet-version |
+  echo "Checking vet version"
+
+  vet version
+
+  if [ $? -ne 0 ]; then
+    echo "Error: vet is not installed"
+    exit 1
 
 # If policy file is provided, check if it exists
 .check-policy-file: &check-policy-file | 
@@ -205,11 +214,12 @@ vet_dependency_scanning:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
     VET_API_KEY: $[[ inputs.cloud-key ]]
     VET_CONTROL_TOWER_TENANT_ID: $[[ inputs.cloud-tenant ]]
-  script: 
-    - vet version
+  before_script:
+    - *check-vet-version
     - *check-policy-file
     - *check-exception-file
     - *veirfy-cloud-config
+  script: 
     - *setup-vet-command
     - *add-policy-file
     - *add-exception-file
@@ -223,11 +233,13 @@ vet_dependency_scanning:
       dependency_scanning: $ARTIFACT_FILENAME
     expire_in: 1 week
   rules:
+    # Run when we are on the default branch
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       when: always
+    # Run when these files changes
     - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
       changes:
-        compare_to: 'refs/heads/main'
+        compare_to: 'refs/heads/$CI_DEFAULT_BRANCH'
         paths:
           - Gemfile.lock
           - yarn.lock
@@ -240,4 +252,5 @@ vet_dependency_scanning:
           - pnpm-lock.yaml
           - uv.lock
       when: on_success
+    # Else dont run the job
     - when: never
