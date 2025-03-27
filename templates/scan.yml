@@ -65,6 +65,7 @@ spec:
   if [ $? -ne 0 ]; then
     echo "Error: vet is not installed"
     exit 1
+  fi
 
 # If policy file is provided, check if it exists
 .check-policy-file: &check-policy-file | 
