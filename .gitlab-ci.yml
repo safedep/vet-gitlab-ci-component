@@ -1,8 +1,6 @@
 # Ensure if the safedep/vet/scan component is available
 include:
   - component: $CI_SERVER_FQDN/$CI_PROJECT_PATH/scan@$CI_COMMIT_SHA
-    inputs:
-      always-run: true # for testing purposes
   - component: $CI_SERVER_FQDN/$CI_PROJECT_PATH/sbom@$CI_COMMIT_SHA
 
 
@@ -19,6 +17,11 @@ variables:
   script:
     - echo "Expect that a job named '$JOB_NAME' is added to the pipeline"
     - |
+      if [ "$SHOULD_ADDED" = "false" ]; then
+        echo "Skipping job '$JOB_NAME' because it should not be added"
+        exit 0
+      fi
+
       route="${CI_API_V4_URL}/projects/$CI_PROJECT_ID/pipelines/$CI_PIPELINE_ID/jobs"
       if curl --silent --header "JOB-TOKEN: $CI_JOB_TOKEN" $route | jq -e "any(.name | contains(\"$JOB_NAME\"))" > /dev/null; then
         echo "Component Job '$JOB_NAME' is present"
@@ -33,11 +36,13 @@ ensure-job-added-dependency-scanning:
   <<: *ensure-job-added
   variables:
     JOB_NAME: $SCAN_JOB_NAME
+    SHOULD_ADDED: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH # Only add the job on the default branch, befause in non-default branch the job is added only when the dependency files change
 
 ensure-job-added-sbom:
   <<: *ensure-job-added
   variables:
     JOB_NAME: $SBOM_JOB_NAME
+    SHOULD_ADDED: true 
 
 # Ensure that a project description exists, because it will be important to display
 # the resource in the catalog.
