@@ -55,8 +55,11 @@ spec:
       description: 'Whether the scanning job is allowed to fail' 
       type: boolean
       default: true
+    always-run:
+      description: 'Whether the scanning job should always run'
+      type: boolean
+      default: false
 ---
-
 # If policy file is provided, check if it exists
 .check-policy-file: &check-policy-file | 
   echo "Checking if policy file exists: $[[ inputs.policy ]]"
@@ -111,42 +114,6 @@ spec:
     
     echo "Cloud configuration validated successfully"
   fi
-
-# Define lockfile patterns as a variable
-.declare-variables-lockfile-patterns: &declare-variables-lockfile-patterns |
-  echo "Declaring lockfile patterns"
-
-  LOCKFILE_PATTERNS=(
-    'Gemfile.lock'
-    'package-lock.json'
-    'yarn.lock'
-    'Pipfile.lock'
-    'poetry.lock'
-    'go.mod'
-    'pom.xml'
-    'gradle.lockfile'
-    'requirements.txt'
-    'pnpm-lock.yaml'
-    'uv.lock'
-  )
-
-# We need curl and jq to check for lockfile changes in merge request pipelines
-.download-jq: &download-jq |
-  echo "Downloading jq"
-
-  apt-get update && apt-get install -y jq
-
-# MERGER REQUEST SPECIFIC SCRIPT
-# For Merge Request, we only run vet when dependency are changed (throught checking lockfiles changes)
-# If no then return without scanning (no need)
-.check-dependency-changes: &check-dependency-changes |
-  echo "Checking dependency changes"
-
-  if [ "$CI_COMMIT_BRANCH" != "$CI_DEFAULT_BRANCH" ]; then
-    echo "Running in a merge request pipeline, checking for lockfile changes..."
-  fi
-
-  echo "Dependency changes checked"
 
 # Initialize the vet command
 .setup-vet-command: &setup-vet-command |
@@ -237,18 +204,15 @@ vet_dependency_scanning:
   image: 
     name: ghcr.io/safedep/vet:$[[ inputs.version ]]
     entrypoint: [""] # by default vet's docker entrypoint is ["vet"] but we want to it as environment  / shell, so we override it to empty allowsing gitlab to work with it
+  variables:
+    ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
+    VET_API_KEY: $[[ inputs.cloud-key ]]
+    VET_CONTROL_TOWER_TENANT_ID: $[[ inputs.cloud-tenant ]]
   before_script:
     - vet version
     - *check-policy-file
     - *check-exception-file
     - *veirfy-cloud-config
-    - *download-jq
-    - *declare-variables-lockfile-patterns
-    - *check-dependency-changes
-  variables:
-    ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
-    VET_API_KEY: $[[ inputs.cloud-key ]]
-    VET_CONTROL_TOWER_TENANT_ID: $[[ inputs.cloud-tenant ]]
   script: 
     - *setup-vet-command
     - *add-policy-file
@@ -256,10 +220,29 @@ vet_dependency_scanning:
     - *add-cloud-sync-flags
     - *add-trusted-registries
     - *execute-vet-command
+  after_script:
     - *check-artifact-file
   artifacts:
     access: $[[ inputs.artifact-access ]]
     reports: 
       dependency_scanning: $ARTIFACT_FILENAME
     expire_in: 1 week
+  rules:
+    # Always run on default branch OR when always-run is true
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: always
 
+    # For other cases, run when dependency files change
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
+      changes:
+        - Gemfile.lock
+        - yarn.lock
+        - Pipfile.lock
+        - poetry.lock
+        - go.mod
+        - pom.xml
+        - gradle.lockfile
+        - requirements.txt
+        - pnpm-lock.yaml
+        - uv.lock
+      when: always
