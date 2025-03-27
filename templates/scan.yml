@@ -74,7 +74,7 @@ check-dependency-changes:
   script:
     - echo "Checking dependency changes..."
   rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - &dependency_changes
       changes:
         - Gemfile.lock
         - yarn.lock
@@ -87,19 +87,9 @@ check-dependency-changes:
         - pnpm-lock.yaml
         - uv.lock
       when: always
-    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
-      changes:
-        - Gemfile.lock
-        - yarn.lock
-        - Pipfile.lock
-        - poetry.lock
-        - go.mod
-        - pom.xml
-        - gradle.lockfile
-        - requirements.txt
-        - pnpm-lock.yaml
-        - uv.lock
-      when: always
+      if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - <<: *dependency_changes
+      if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
 
 # If policy file is provided, check if it exists
 .check-policy-file: &check-policy-file | 
