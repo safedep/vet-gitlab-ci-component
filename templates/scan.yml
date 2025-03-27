@@ -151,7 +151,7 @@ spec:
   if [ "$CI_COMMIT_BRANCH" != "$CI_DEFAULT_BRANCH" ]; then
     echo "Running in a merge request pipeline, checking for lockfile changes..."
 
-    curl -X GET $CI_API_V4_URL/projects/$CI_PROJECT_ID/merge_requests/$CI_MERGE_REQUEST_IID/changes
+    curl -X GET $CI_API_V4_URL/projects/$CI_PROJECT_ID/
 
   fi
 
