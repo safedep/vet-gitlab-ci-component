@@ -46,5 +46,5 @@ The GitLab CI component accepts the following inputs:
 | Input | Type | Default | Description |
 |-------|------|---------|-------------|
 | `stage` | string | `test` | The stage where you want the job to be added |
-| `artifact_access` | string | `developer` | Determines who can access the job artifacts from the GitLab UI or API. Options: `all`, `developer`, `none` |
-| `allow_failure` | boolean | `true` | Whether the scanning job is allowed to fail |
+| `artifact-access` | string | `developer` | Determines who can access the job artifacts from the GitLab UI or API. Options: `all`, `developer`, `none` |
+| `allow-failure` | boolean | `true` | Whether the scanning job is allowed to fail |
