@@ -30,19 +30,17 @@ variables:
         exit 1
       fi
   rules:
-    - if: ($CI_COMMIT_BRANCH || $CI_COMMIT_TAG) && $CI_SERVER_HOST =~ /gitlab.com/
+    - if: ($CI_COMMIT_BRANCH || $CI_COMMIT_TAG) && $CI_SERVER_HOST =~ /gitlab.com/ && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH # Only add the job on the default branch, befause in non-default branch the job is added only when the dependency files change # Only add the job on the default branch, befause in non-default branch the job is added only when the dependency files change # Only add the job on the default branch, befause in non-default branch the job is added only when the dependency files change # Only add the job on the default branch, befause in non-default branch the job is added only when the dependency files change
 
 ensure-job-added-dependency-scanning:
   <<: *ensure-job-added
   variables:
     JOB_NAME: $SCAN_JOB_NAME
-    SHOULD_ADDED: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH # Only add the job on the default branch, befause in non-default branch the job is added only when the dependency files change
 
 ensure-job-added-sbom:
   <<: *ensure-job-added
   variables:
     JOB_NAME: $SBOM_JOB_NAME
-    SHOULD_ADDED: true 
 
 # Ensure that a project description exists, because it will be important to display
 # the resource in the catalog.
