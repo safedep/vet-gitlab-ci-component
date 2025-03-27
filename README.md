@@ -10,6 +10,8 @@ include:
   - component: gitlab.com/safedep/ci-components/vet/scan@<VERSION>
 ```
 
+where `<VERSION>` is the latest released tag or `main`.
+
 #### Using Inputs
 
 ```yaml
