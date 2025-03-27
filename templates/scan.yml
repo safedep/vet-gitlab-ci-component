@@ -236,7 +236,7 @@ spec:
 
 vet_dependency_scanning:
   stage: $[[ inputs.stage ]]
-  allow_failure: $[[ inputs.allow_failure ]]
+  allow_failure: $[[ inputs.allow-failure ]]
   image: 
     name: ghcr.io/safedep/vet:$[[ inputs.version ]]
     entrypoint: [""] # by default vet's docker entrypoint is ["vet"] but we want to it as environment  / shell, so we override it to empty allowsing gitlab to work with it
@@ -259,7 +259,7 @@ vet_dependency_scanning:
     - *execute-vet-command
     - *check-artifact-file
   artifacts:
-    access: $[[ inputs.artifact_access ]]
+    access: $[[ inputs.artifact-access ]]
     reports: 
       dependency_scanning: $ARTIFACT_FILENAME
     expire_in: 1 week
