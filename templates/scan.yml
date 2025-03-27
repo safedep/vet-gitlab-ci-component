@@ -225,6 +225,7 @@ vet_dependency_scanning:
       dependency_scanning: $ARTIFACT_FILENAME
     expire_in: 1 week
   rules:
+    # Run when its main/master branch
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       when: always
 
@@ -243,5 +244,5 @@ vet_dependency_scanning:
         - uv.lock
       when: always
 
-    # If no condition then do nothing :)
+    # Else skip the job
     - when: never
