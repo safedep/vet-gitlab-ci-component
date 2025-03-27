@@ -250,6 +250,8 @@ vet_dependency_scanning:
     # - *check-dependency-changes
   variables:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
+    VET_API_KEY: $[[ inputs.cloud-key ]]
+    VET_CONTROL_TOWER_TENANT_ID: $[[ inputs.cloud-tenant ]]
   script: 
     - *setup-vet-command
     - *add-policy-file
