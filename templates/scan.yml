@@ -145,29 +145,8 @@ spec:
   if [ "$CI_COMMIT_BRANCH" != "$CI_DEFAULT_BRANCH" ]; then
     echo "Running in a merge request pipeline, checking for lockfile changes..."
 
-    RESPONSE=$(curl --fail --header "PRIVATE-TOKEN: $CI_JOB_TOKEN" \
-      "$CI_API_V4_URL/projects/$CI_PROJECT_ID/merge_requests/$CI_MERGE_REQUEST_IID/changes" || echo "API call failed")
+    curl -X GET $CI_API_V4_URL/projects/$CI_PROJECT_ID/merge_requests/$CI_MERGE_REQUEST_IID/changes
 
-    echo "API Response: $RESPONSE"
-
-    CHANGED_FILES=$(echo "$RESPONSE" | jq -r '.changes[].new_path' 2>/dev/null || echo "jq parsing failed")
-
-    echo "Changed files: $CHANGED_FILES"
-
-    # Create pattern string from array
-    PATTERN=$(IFS="|"; echo "${LOCKFILE_PATTERNS[*]}")
-    
-    # Check if any lockfiles are in the changed files
-    CHANGED_LOCKFILES=$(echo "$CHANGED_FILES" | grep -E "$PATTERN")
-
-    if [[ -z "$CHANGED_LOCKFILES" ]]; then
-      echo "No lockfiles changed in this MR, skipping dependency scan"
-      exit 0
-    else
-      echo "Lockfiles changed in this MR:"
-      echo "$CHANGED_LOCKFILES"
-      echo "Proceeding with dependency scan"
-    fi
   fi
 
   echo "Dependency changes checked"
