@@ -242,3 +242,6 @@ vet_dependency_scanning:
         - pnpm-lock.yaml
         - uv.lock
       when: always
+
+    # If no condition then do nothing :)
+    - when: never
