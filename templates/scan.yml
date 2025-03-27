@@ -152,6 +152,8 @@ spec:
 
     CHANGED_FILES=$(echo "$RESPONSE" | jq -r '.changes[].new_path' 2>/dev/null || echo "jq parsing failed")
 
+    echo "Changed files: $CHANGED_FILES"
+
     # Create pattern string from array
     PATTERN=$(IFS="|"; echo "${LOCKFILE_PATTERNS[*]}")
     
@@ -264,9 +266,9 @@ vet_dependency_scanning:
     - *check-policy-file
     - *check-exception-file
     - *veirfy-cloud-config
-    # - *download-curl-jq
-    # - *declare-variables-lockfile-patterns
-    # - *check-dependency-changes
+    - *download-curl-jq
+    - *declare-variables-lockfile-patterns
+    - *check-dependency-changes
   variables:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
     VET_API_KEY: $[[ inputs.cloud-key ]]
