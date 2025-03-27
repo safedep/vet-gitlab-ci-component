@@ -206,6 +206,19 @@ spec:
 .add-trusted-registries: &add-trusted-registries |
   echo "Adding trusted registries"
 
+  # Convert the JSON array to bash array
+  IFS=',' read -ra REGISTRY_ARRAY <<< "$[[ inputs.trusted-registries ]]"
+
+  # Loop through each registry and add it to the command
+  for registry in "${REGISTRY_ARRAY[@]}"; do
+    # Remove any leading/trailing spaces and quotes
+    registry=$(echo "$registry" | sed -e 's/^[[:space:]"]*//g' -e 's/[[:space:]"]*$//g')
+    if [ ! -z "$registry" ]; then
+      CMD="$CMD --trusted-registry $registry"
+      echo "Added trusted registry: $registry"
+    fi
+  done
+
   echo "Trusted registries: $[[ inputs.trusted-registries ]]"
 
 # Add exception file if provided
