@@ -206,6 +206,8 @@ spec:
 .add-trusted-registries: &add-trusted-registries |
   echo "Adding trusted registries"
 
+  # Input will be like a string of "[registry1, registry2, registry3]"
+
   # First remove the square brackets from the entire input string
   CLEANED_INPUT=$(echo "$[[ inputs.trusted-registries ]]" | sed -e 's/^\[//g' -e 's/\]$//g')
 
@@ -222,7 +224,7 @@ spec:
     fi
   done
 
-  echo "Added trusted registries, final command: $CMD"
+  echo "Added trusted registries"
 
 # Add exception file if provided
 .add-exception-file: &add-exception-file |
