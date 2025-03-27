@@ -132,7 +132,7 @@ spec:
   echo "Checking policy file to add to vet command"
 
   if [ ! -z "$[[ inputs.policy ]]" ]; then
-    CMD="$CMD --filter-suite $[[ inputs.policy ]]"
+    CMD="$CMD --filter-suite $[[ inputs.policy ]] --filter-fail --fail-fast"
 
     echo "Added policy file: $[[ inputs.policy ]]"
   fi
