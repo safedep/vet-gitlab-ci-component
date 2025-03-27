@@ -43,15 +43,15 @@ spec:
     stage:
       description: 'The stage where you want the job to be added'
       default: test
-    artifact_access:
-      description: 'artifact_access to determine who can access the job artifacts from the GitLab UI or API'
+    artifact-access:
+      description: 'artifact access to determine who can access the job artifacts from the GitLab UI or API'
       type: string
       options: 
         - 'all'
         - 'developer'
         - 'none'
       default: 'developer'
-    allow_failure: # Allowing a job to fail without stopping the pipeline.
+    allow-failure: # Allowing a job to fail without stopping the pipeline.
       description: 'Whether the scanning job is allowed to fail' 
       type: boolean
       default: true

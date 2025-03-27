@@ -16,7 +16,6 @@ include:
 include:
   - component: gitlab.com/safedep/ci-components/vet/scan@<VERSION>
     inputs:
-      policy: '.gitlab/vet/policy.yml' 
       cloud: true
       cloud-key: $CLOUD_KEY
       cloud-tenant: $CLOUD_TENANT
