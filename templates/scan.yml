@@ -195,6 +195,10 @@ spec:
 
   echo "Artifact file exists"
 
+.debug-branch: &debug-branch |
+  echo "Commit branch: $CI_COMMIT_BRANCH"
+  echo "Default branch: $CI_DEFAULT_BRANCH"
+
 vet_dependency_scanning:
   stage: $[[ inputs.stage ]]
   allow_failure: $[[ inputs.allow-failure ]]
@@ -205,12 +209,12 @@ vet_dependency_scanning:
     ARTIFACT_FILENAME: "gl-dependency-scanning-report.json"
     VET_API_KEY: $[[ inputs.cloud-key ]]
     VET_CONTROL_TOWER_TENANT_ID: $[[ inputs.cloud-tenant ]]
-  before_script:
+  script: 
     - vet version
+    - *debug-branch
     - *check-policy-file
     - *check-exception-file
     - *veirfy-cloud-config
-  script: 
     - *setup-vet-command
     - *add-policy-file
     - *add-exception-file
@@ -226,6 +230,19 @@ vet_dependency_scanning:
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       when: always
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+      changes:
+        - Gemfile.lock
+        - yarn.lock
+        - Pipfile.lock
+        - poetry.lock
+        - go.mod
+        - pom.xml
+        - gradle.lockfile
+        - requirements.txt
+        - pnpm-lock.yaml
+        - uv.lock
+      when: on_success
     - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
       changes:
         - Gemfile.lock
