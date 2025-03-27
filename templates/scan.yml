@@ -131,10 +131,10 @@ spec:
   )
 
 # We need curl and jq to check for lockfile changes in merge request pipelines
-.download-curl-jq: &download-curl-jq |
-  echo "Downloading curl and jq"
+.download-jq: &download-jq |
+  echo "Downloading jq"
 
-  apt-get update && apt-get install -y curl jq
+  apt-get update && apt-get install -y jq
 
 # MERGER REQUEST SPECIFIC SCRIPT
 # For Merge Request, we only run vet when dependency are changed (throught checking lockfiles changes)
@@ -242,7 +242,7 @@ vet_dependency_scanning:
     - *check-policy-file
     - *check-exception-file
     - *veirfy-cloud-config
-    - *download-curl-jq
+    - *download-jq
     - *declare-variables-lockfile-patterns
     - *check-dependency-changes
   variables:
