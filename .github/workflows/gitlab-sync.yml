@@ -1,0 +1,34 @@
+name: Sync Repository to GitLab
+
+on:
+  push:
+    branches:
+      - main
+  release:
+    types:
+      - published
+
+jobs:
+  sync-to-gitlab:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # All History
+
+      - name: Sync to GitLab on push to main
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git remote add gitlab https://oauth2:${GITLAB_TOKEN}@gitlab.com/safedep/ci-components/vet.git
+          git push gitlab main
+        env: 
+          GITLAB_TOKEN: ${{ secrets.GITLAB_ACCESS_TOKEN }}
+
+      - name: Sync tags to GitLab
+        if: github.event_name == 'release' 
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB_ACCESS_TOKEN }}
+        run: |
+          git remote add gitlab https://oauth2:${GITLAB_TOKEN}@gitlab.com/KunalSin9h/lab.git
+          git push gitlab ${{ github.ref_name }}
