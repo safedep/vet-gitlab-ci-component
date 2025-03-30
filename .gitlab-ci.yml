@@ -3,7 +3,6 @@ include:
   - component: $CI_SERVER_FQDN/$CI_PROJECT_PATH/scan@$CI_COMMIT_SHA
   - component: $CI_SERVER_FQDN/$CI_PROJECT_PATH/sbom@$CI_COMMIT_SHA
 
-
 stages: [test, release]
 
 variables:
@@ -55,7 +54,6 @@ check-description:
       fi
   rules:
     - if: $CI_SERVER_HOST =~ /gitlab.com/
-
 
 # Ensure that a `README.md` exists in the root directory as it represents the
 # documentation for the whole components repository.
