@@ -50,3 +50,12 @@ The GitLab CI component accepts the following inputs:
 | `stage` | string | `test` | The stage where you want the job to be added |
 | `artifact-access` | string | `developer` | Determines who can access the job artifacts from the GitLab UI or API. Options: `all`, `developer`, `none` |
 | `allow-failure` | boolean | `true` | Whether the scanning job is allowed to fail |
+
+## Support
+
+Please raise an issue on [GitHub](https://github.com/safedep/vet-gitlab-ci-component/issues) for any support requests.
+
+## Reference
+
+- [https://github.com/safedep/vet](https://github.com/safedep/vet)
+- [https://safedep.io](https://safedep.io)
