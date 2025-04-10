@@ -1,14 +1,14 @@
 # Ensure if the safedep/vet/scan component is available
 include:
   - component: $CI_SERVER_FQDN/$CI_PROJECT_PATH/scan@$CI_COMMIT_SHA
-  - component: $CI_SERVER_FQDN/$CI_PROJECT_PATH/sbom@$CI_COMMIT_SHA
+  # - component: $CI_SERVER_FQDN/$CI_PROJECT_PATH/sbom@$CI_COMMIT_SHA
 
 stages: [test, release]
 
 variables:
   # make sure its same as the job name in the template/scan.yml
   SCAN_JOB_NAME: "vet_dependency_scanning"
-  SBOM_JOB_NAME: "vet_sbom"
+  # SBOM_JOB_NAME: "vet_sbom"
 
 .ensure-job-added: &ensure-job-added
   stage: .pre
@@ -32,10 +32,10 @@ ensure-job-added-dependency-scanning:
   variables:
     JOB_NAME: $SCAN_JOB_NAME
 
-ensure-job-added-sbom:
-  <<: *ensure-job-added
-  variables:
-    JOB_NAME: $SBOM_JOB_NAME
+# ensure-job-added-sbom:
+#   <<: *ensure-job-added
+#   variables:
+#     JOB_NAME: $SBOM_JOB_NAME
 
 # Ensure that a project description exists, because it will be important to display
 # the resource in the catalog.
