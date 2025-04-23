@@ -42,6 +42,7 @@ The GitLab CI component accepts the following inputs:
 | `exception-file` | string | | Path to exception file |
 | `trusted-registries` | array | `[]` | List of trusted registry base URLs |
 | `timeout` | number | `300` | Timeout in seconds for vet to wait for external service results to be available. For malicious package analysis, this set the maximum time to wait for the analysis results to be available |
+| `skip-filter-ci-fail` | boolean | `false` | Skip policy violation --filter-fail and allow CI to pass on any policy violation, to show reports in GitLab UI |
 
 ## CI Configuration
 

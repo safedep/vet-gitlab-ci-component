@@ -39,6 +39,11 @@ spec:
       type: number
       default: 300
 
+    skip-filter-ci-fail:
+      description: 'Skip policy violation --filter-fail and allow CI to pass on any policy violation'
+      type: boolean
+      default: false
+
     # gitlab specific inputs
     stage:
       description: 'The stage where you want the job to be added'
@@ -132,7 +137,12 @@ spec:
   echo "Checking policy file to add to vet command"
 
   if [ ! -z "$[[ inputs.policy ]]" ]; then
-    CMD="$CMD --filter-suite $[[ inputs.policy ]] --filter-fail --fail-fast"
+    CMD="$CMD --filter-suite $[[ inputs.policy ]]"
+
+    # If not skipping (default) then add filter-fail and fail-fast
+    if [[ "$[[ inputs.skip-filter-ci-fail ]]" == "false" ]]; then
+      CMD="$CMD --filter-fail --fail-fast"
+    fi
 
     echo "Added policy file: $[[ inputs.policy ]]"
   fi
