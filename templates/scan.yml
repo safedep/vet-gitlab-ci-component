@@ -131,7 +131,7 @@ spec:
 .setup-vet-command: &setup-vet-command |
   echo "Setting up vet command"
 
-  CMD="vet scan --report-gitlab $ARTIFACT_FILENAME"
+  CMD="vet scan -s --report-gitlab $ARTIFACT_FILENAME"
 
 .add-policy-file: &add-policy-file |
   echo "Checking policy file to add to vet command"
