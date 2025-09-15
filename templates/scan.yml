@@ -264,6 +264,6 @@ vet_dependency_scanning:
           - uv.lock
           - Cargo.lock
           - package-lock.json
-      when: on_success # If successfully chaned any file
+      when: on_success # If successfully changed any file
     # Else dont run the job
     - when: never
