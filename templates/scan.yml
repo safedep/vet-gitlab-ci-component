@@ -262,6 +262,8 @@ vet_dependency_scanning:
           - requirements.txt
           - pnpm-lock.yaml
           - uv.lock
-      when: on_success # If successfully chaned any file
+          - Cargo.lock
+          - package-lock.json
+      when: on_success # If successfully changed any file
     # Else dont run the job
     - when: never
