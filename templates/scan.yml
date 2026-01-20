@@ -131,7 +131,7 @@ spec:
 .setup-vet-command: &setup-vet-command |
   echo "Setting up vet command"
 
-  CMD="vet scan -s --report-gitlab $ARTIFACT_FILENAME"
+  CMD="vet scan -s --report-gitlab $ARTIFACT_FILENAME --fail-fast"
 
 .add-policy-file: &add-policy-file |
   echo "Checking policy file to add to vet command"
@@ -139,9 +139,9 @@ spec:
   if [ ! -z "$[[ inputs.policy ]]" ]; then
     CMD="$CMD --filter-suite $[[ inputs.policy ]]"
 
-    # If not skipping (default) then add filter-fail and fail-fast
+    # If not skipping (default) then add filter-fail
     if [[ "$[[ inputs.skip-filter-ci-fail ]]" == "false" ]]; then
-      CMD="$CMD --filter-fail --fail-fast"
+      CMD="$CMD --filter-fail"
     fi
 
     echo "Added policy file: $[[ inputs.policy ]]"
