@@ -7,10 +7,10 @@ driven vetting of OSS components against supply chain security risks.
 
 ```yaml
 include:
-  - component: gitlab.com/safedep/ci-components/vet/scan@<VERSION>
+  - component: gitlab.com/safedep/ci-components/vet/scan@v1.5.2
 ```
 
-where `<VERSION>` is the latest released tag or `main`.
+where `<VERSION>` is the latest released tag (which is `v1.5.2`) or `main`.
 
 #### Using Inputs
 
